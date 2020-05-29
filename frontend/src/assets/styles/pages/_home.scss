@@ -1,0 +1,472 @@
+
+/**
+*    SEARCH BOX
+ */
+.search-box {
+  background: rgba(255,255,255,0.85);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+  margin-top: 210px;
+}
+
+
+.search-box-fix {
+  margin-top: 0;
+  padding: 2rem 2rem 1rem 2rem;
+  margin-bottom: 0;
+}
+
+.search-box h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+.search-box .row .col-sm {
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+.search-box .row .col-sm .mb-3 {
+  margin: 0 !important;
+}
+
+
+
+.search-box .react-datepicker-wrapper .input-group {
+  display: flex;
+  align-content: center;
+}
+
+.search-box .react-datepicker-wrapper i{
+  margin-top: 12px;
+  margin-left: 5px;
+}
+
+.search-box.react-datepicker-wrapper .form-control{
+
+}
+
+@media (max-width: 992px) {
+  .search-box {
+    margin: 120px 0;
+  }
+}
+
+.small-header {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.small-header .navbar .container {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+
+
+/**
+*   OVERVIEW
+ */
+
+
+.overview-container {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.overview-box {
+  max-width: 370px;
+  margin: 2rem 1rem;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+  min-height: 550px;
+}
+
+.overview-box img {
+  max-width: inherit;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+  padding: 0;
+}
+
+.overview-container h1{
+  text-align: center;
+}
+
+.overview-box h3 {
+  margin-top: 0;
+}
+
+.overview-box .overview-button {
+  margin: 2rem;
+  text-align: right;
+}
+
+.overview-box .btn {
+  min-width: 8rem;
+}
+
+.overview-text {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.overview-text p {
+  padding: 0;
+}
+
+@media (max-width: 576px) {
+  .search-button .btn {
+    margin-bottom: 1rem;
+  }
+}
+
+
+/**
+*   STARS EXPERIENCE
+ */
+
+.stars-background h2{
+  text-align: center;
+}
+
+.stars-icon {
+  max-width: 120px;
+}
+
+.stars-item {
+  text-align: center;
+  max-width: 350px;
+  padding: 2rem;
+}
+
+.stars-item h4 {
+  font-family: raleway;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #3A3A3A;
+
+  margin: 1.5rem 0 1rem 0;
+}
+
+.vip-services h3 {
+  color: #3A3A3A;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.vip-item {
+  text-align: left;
+  max-width: 500px;
+}
+
+@media (max-width: 992px) {
+  .vip-item {
+    text-align: center;
+  }
+}
+
+
+/**
+*   STAY SIMPLIFIED
+ */
+
+
+.stay-list ul li {
+  font-size: 0.9rem;
+  line-height: 2.2rem;
+}
+
+.stay-list ul li span {
+  margin-right: 1.5rem;
+}
+
+.stay-list {
+  padding: 1rem;
+}
+
+.stay-image img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  .stay-list {
+    padding: 0 0 0 1rem;
+  }
+
+  .stay-simplified button {
+    margin: 2rem 0;
+  }
+}
+
+
+
+/**
+*  EXPLORE LOCATIONS
+ */
+
+.location {
+  margin: 1rem;
+  min-height: 250px;
+  max-width: 350px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+}
+
+.location:hover {
+  opacity: .3;
+  cursor: pointer;
+}
+
+.location-title {
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.location-title h3 {
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+.brookline {
+  background-size: cover;
+  background: url(../images/brookline.jpg) center;
+}
+
+.boston {
+  background-size: cover;
+  background: url(../images/boston-skyline.jpg) center;
+}
+
+.cambridge {
+  background-size: cover;
+  background: url(../images/cambridge2.jpg) center;
+}
+
+.quincy {
+  background-size: cover;
+  background: url(../images/quincy-wollaston.jpg) center;
+}
+
+
+/**
+*  TAKE A LOOK PROPERTIES
+ */
+
+.takealook-button {
+  text-align: right;
+}
+
+.takealook-title .pre-title {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.takealook-title h2 {
+  margin: 0;
+}
+
+.single-property {
+  max-width: 370px;
+  min-width: 370px;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+  min-height: 455px;
+  margin: 0 0.5rem 2rem 0.5rem;
+}
+
+.home-title {
+  background: linear-gradient(to top, rgba(0,113,170,1), rgba(0,113,170,0.2), transparent), url(../images/example1.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 8px 8px 0 0;
+  padding: 1.5rem;
+}
+
+.home-title h5 {
+  padding-top: 8rem;
+  font-family: raleway;
+  font-weight: normal;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.home-title h3 {
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  width: 100%;
+  opacity: 0;
+  transition: .2s ease;
+  background: linear-gradient(to bottom, #0071AA, #0071AA, transparent), no-repeat center;
+  border-radius: 8px 8px 0 0 ;
+  cursor: pointer;
+}
+
+.single-property:hover .overlay {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text h3 {
+  font-size: 1.5rem;
+}
+
+.features-property .features-property-column {
+  margin: 0;
+  padding: 1rem;
+}
+
+.features-property ul li {
+  font-size: 0.7rem;
+  margin: 1rem 0 ;
+}
+
+.features-property ul li i {
+  font-size: 1rem;
+  margin: 0.2rem;
+}
+
+.price-property {
+  text-align: right;
+}
+
+.price-property h4 {
+  color: #E8C36A;
+  font-family: raleway;
+  font-weight: normal;
+  font-size: 1.3rem;
+  margin: 0.7rem 0 0 0;
+  padding: 0;
+}
+
+.price-property p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.button-group {
+  padding: 0;
+  text-align: center;
+  margin: -1rem;
+}
+
+.button-group .btn {
+  margin: 0.5rem;
+}
+
+.button-property {
+  min-width: 9rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .corporate-housing .row .col-xs .btn {
+    margin: 1rem 0 2rem 0;
+  }
+
+  .takealook-button {
+    text-align: left;
+    margin: 2rem 0 1rem 0;
+  }
+
+}
+
+
+/** CORPORATE HOUSING **/
+
+@media (max-width: 768px) {
+  .corporate-housing .row .col-md .btn {
+    margin: 1rem 0 2rem 0;
+  }
+}
+
+
+/** MEDICAL TRAVEL **/
+
+@media (max-width: 768px) {
+  .medical-travel .row .col-md p {
+    margin: 2rem 0;
+  }
+}
+
+
+/** GUEST REVIEWS **/
+
+.review {
+  background-color: #E8C36A;
+  max-width: 370px;
+  margin: 2rem 1rem;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+  min-height: 300px;
+}
+
+.review p {
+  padding: 2rem;
+  line-height: 2rem;
+}
+
+
+/** SUBSCRIBE **/
+
+.subscribe {
+  padding: 1rem 0 2rem 0;
+}
+
+.blockquote {
+  margin: 2rem;
+}
+
+.blockquote p {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0
+}
+
+.star {
+  padding: 0;
+}
+
+.fa-star {
+  color: #0071AA;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .subscribe .row .col-md {
+    margin: 0.5rem 0;
+  }
+
+  .subscribe .row .col-md .btn {
+    margin: 1rem 0;
+  }
+}

@@ -1,0 +1,176 @@
+
+p {
+  color: #3A3A3A;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 !important;
+}
+
+ul li {
+  font-size: 0.9rem;
+}
+
+.lead {
+  font-size: 1.2rem !important;
+}
+
+.text-justify {
+  text-align: justify;
+  text-align-last: center;
+}
+
+img {
+  max-width: 250px;
+  border-radius: 8px;
+}
+
+.form-control  {
+  font-size: 0.9rem;
+  height: 3rem;
+  color: #9A9A9A;
+
+}
+
+
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+
+@media (max-width: 991px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 100%;
+  }
+}
+
+
+/** Links **/
+
+a {
+  color: #3A3A3A;
+  font-size: 0.9rem;
+  line-height: 2rem;
+}
+
+a:hover {
+  color: #87D2EF;
+  text-decoration: underline;
+}
+
+/** Lists **/
+
+ul {
+  padding: 0 1rem;
+}
+
+/** Buttons **/
+
+.btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #0071AA;
+  height: 3rem;
+  text-align: center !important;
+}
+
+.btn-outline-primary {
+  border: 2px solid #E8C36A !important;
+  min-width: 12rem;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active, .open>.dropdown-toggle.btn-outline-primary {
+  color: white;
+  background-color: #E8C36A !important;
+  transition:0s;
+}
+
+
+/** ----------- ICONS ----------- **/
+
+i {
+  color: #CBCBCB;
+}
+
+/** ----------- BACKGROUNDS ----------- **/
+
+.main-background {
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.3), transparent), url(../images/boston.jpg) no-repeat center;
+  background-size: cover;
+  padding: 3rem 3rem 1rem 3rem;
+  height: 500px;
+}
+
+.main-background-property {
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(../images/stayinboston.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.main-background-2 {
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.9),  rgba(255,255,255,0.4)), url(../images/boston-2.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.main-background-3 {
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.8), rgba(255,255,255,0.4)), url(../images/boston-3.jpg) no-repeat center;
+  background-size: cover;
+}
+
+@media (max-width: 992px) {
+  .main-background {
+    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.8), transparent), url(../images/boston.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .main-background-2 {
+    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.8), rgba(255,255,255,0.4)), url(../images/boston-2.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+}
+
+
+
+.grey-background {
+  background-color: #F8F8F8;
+  background-color: #EEEEEE;
+}
+
+.blue-background {
+  background-color: #3B87AE;
+}
+
+.blue-background p {
+  color: white;
+}
+
+.blue-background h2 {
+  color: white;
+}
+
+.blue-background .btn {
+  color: white;
+}
+
+.blue-background .btn:hover {
+  color: black;
+}
+
+.stars-background {
+  background: linear-gradient(to right, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(../images/room3.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.subscribe-background {
+  background: linear-gradient(to right, rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(../images/subscribe-bg.jpg) no-repeat center;
+  background-size: cover;
+}

@@ -1,0 +1,28 @@
+/** ----------- LAYOUT ----------- **/
+
+
+section {
+  padding: 5rem;
+}
+
+.container-fluid {
+  padding: 3rem 2rem;
+}
+
+.container {
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 0;
+  max-width: 1200px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h1, h2 {
+  margin: 1.5rem 0 1.5rem 0;
+}
