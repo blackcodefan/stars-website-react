@@ -104,35 +104,35 @@ i {
 /** ----------- BACKGROUNDS ----------- **/
 
 .main-background {
-  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.3), transparent), url(../images/boston.jpg) no-repeat center;
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.3), transparent), url(../../images/boston.jpg) no-repeat center;
   background-size: cover;
   padding: 3rem 3rem 1rem 3rem;
   height: 500px;
 }
 
 .main-background-property {
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(../images/stayinboston.jpg) no-repeat center;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(../../images/stayinboston.jpg) no-repeat center;
   background-size: cover;
 }
 
 .main-background-2 {
-  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.9),  rgba(255,255,255,0.4)), url(../images/boston-2.jpg) no-repeat center;
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.9),  rgba(255,255,255,0.4)), url(../../images/boston-2.jpg) no-repeat center;
   background-size: cover;
 }
 
 .main-background-3 {
-  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.8), rgba(255,255,255,0.4)), url(../images/boston-3.jpg) no-repeat center;
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.8), rgba(255,255,255,0.4)), url(../../images/boston-3.jpg) no-repeat center;
   background-size: cover;
 }
 
 @media (max-width: 992px) {
   .main-background {
-    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.8), transparent), url(../images/boston.jpg) no-repeat center;
+    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.8), transparent), url(../../images/boston.jpg) no-repeat center;
     background-size: cover;
   }
 
   .main-background-2 {
-    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.8), rgba(255,255,255,0.4)), url(../images/boston-2.jpg) no-repeat center;
+    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.8), rgba(255,255,255,0.4)), url(../../images/boston-2.jpg) no-repeat center;
     background-size: cover;
   }
 
@@ -166,11 +166,11 @@ i {
 }
 
 .stars-background {
-  background: linear-gradient(to right, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(../images/room3.jpg) no-repeat center;
+  background: linear-gradient(to right, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(../../images/room3.jpg) no-repeat center;
   background-size: cover;
 }
 
 .subscribe-background {
-  background: linear-gradient(to right, rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(../images/subscribe-bg.jpg) no-repeat center;
+  background: linear-gradient(to right, rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(../../images/subscribe-bg.jpg) no-repeat center;
   background-size: cover;
 }
