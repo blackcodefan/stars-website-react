@@ -47,13 +47,13 @@ class SearchBox extends React.Component {
     }
 
     handleBrowseButtonClick = (e) => {
-        history.push("/property-listing")
+        history.push("/property")
     }
 
     handleSearchButtonClick = (e) => {
         console.log(this.state)
         if (this.state.checkInDate && this.state.checkOutDate && this.state.adultsCount && this.state.childrenCount) {
-            history.push("/property-listing")
+            history.push("/property")
         }
 
         // show alert on inputs
@@ -68,7 +68,7 @@ class SearchBox extends React.Component {
                 </h1>
                 <p>Short term furnished appartment rentals in Boston</p>
                 <div className="row align-items-start">
-                    <div className='col-sm'>
+                    <div className='col-xs-6 col-sm-4 col-lg-2'>
                         <DatePicker
                             selected={this.state.checkInDate}
                             value={this.state.checkInDate}
@@ -78,10 +78,9 @@ class SearchBox extends React.Component {
                             placeholderText="CheckIn"
                             customInput={<DatePickerInput/>}
                             onChange={this.handleCheckInChange} />
-
                     </div>
 
-                    <div className='col-sm'>
+                    <div className='col-xs-6 col-sm-4 col-lg-2'>
                         <DatePicker
                             selected={this.state.checkOutDate}
                             value={this.state.checkOutDate}
@@ -93,7 +92,7 @@ class SearchBox extends React.Component {
                             onChange={this.handleCheckOutChange} />
                     </div>
 
-                    <div className='col-sm'>
+                    <div className='col-xs-6 col-sm-4 col-lg-2'>
                         <div className="input-group mb-3">
                             <div className="input-group-prepend">
                                 <span className="input-group-text bg-white"><i className="fa fa-user"/></span>
@@ -109,7 +108,7 @@ class SearchBox extends React.Component {
                         </div>
                     </div>
 
-                    <div className='col-sm'>
+                    <div className='col-xs-6 col-sm-4 col-lg-2'>
                         <div className="input-group mb-3">
                             <div className="input-group-prepend">
                                 <span className="input-group-text bg-white"><i className="fa fa-user"/></span>
@@ -125,18 +124,19 @@ class SearchBox extends React.Component {
                         </div>
                     </div>
 
-                    <div className='col-sm search-button'>
+                    <div className='col-xs-6 col-sm-4 col-lg-2 search-button'>
                         <button type="button" className="btn btn-block btn-outline-primary"
                                 onClick={this.handleBrowseButtonClick}>Browse all rentals
                         </button>
                     </div>
 
-                    <div className='col-sm search-button'>
+                    <div className='col-xs-6 col-sm-4 col-lg-2 search-button'>
                         <button type="button" className="btn btn-block btn-outline-primary"
                                 onClick={this.handleSearchButtonClick}>Search
                         </button>
                     </div>
                 </div>
+
             </div>
         );
     }

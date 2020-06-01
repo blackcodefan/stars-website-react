@@ -25,7 +25,7 @@ ul li {
 }
 
 img {
-  max-width: 250px;
+  //max-width: 250px;
   border-radius: 8px;
 }
 
@@ -91,7 +91,7 @@ ul {
 .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active, .open>.dropdown-toggle.btn-outline-primary {
   color: white;
   background-color: #E8C36A !important;
-  transition:0s;
+  transition:0.5s;
 }
 
 
@@ -104,7 +104,7 @@ i {
 /** ----------- BACKGROUNDS ----------- **/
 
 .main-background {
-  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.3), transparent), url(../../images/boston.jpg) no-repeat center;
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.3), transparent), url(../../images/starsofboston.jpg) no-repeat center;
   background-size: cover;
   padding: 3rem 3rem 1rem 3rem;
   height: 500px;
@@ -127,7 +127,7 @@ i {
 
 @media (max-width: 992px) {
   .main-background {
-    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.8), transparent), url(../../images/boston.jpg) no-repeat center;
+    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.8), transparent), url(../../images/starsofboston.jpg) no-repeat center;
     background-size: cover;
   }
 

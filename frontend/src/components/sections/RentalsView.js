@@ -23,7 +23,7 @@ class RentalsView extends React.Component {
 
                 <div className="row container">
                     <div className="col-xs">
-                        <div className="col-md single-property">
+                        <div className="col-md property-card">
                             <div className="home-title">
                                 <h5>Brookline | St. Mary's | Coolidge Corner</h5>
                                 <h3>Spacious Studio in Brownstone</h3>
@@ -53,7 +53,7 @@ class RentalsView extends React.Component {
                                 <div className="features-property-column">
                                     <ul>
                                         <li>
-                                            <i className="fas fa-bath"></i>
+                                            <i className="fa fa-bath"></i>
                                             1 Bathroom
                                         </li>
                                         <li>
@@ -61,7 +61,7 @@ class RentalsView extends React.Component {
                                             Furnished
                                         </li>
                                         <li>
-                                            <i className="fas fa-paw"></i>
+                                            <i className="fa fa-paw"></i>
                                             Pets considered
                                         </li>
                                     </ul>
@@ -88,7 +88,7 @@ class RentalsView extends React.Component {
 
                     </div>
                     <div className="col-xs">
-                        <div className="col-md single-property">
+                        <div className="col-md property-card">
                             <div className="home-title">
                                 <h5>Brookline | St. Mary's | Coolidge Corner</h5>
                                 <h3>Spacious Studio in Brownstone</h3>
@@ -118,7 +118,7 @@ class RentalsView extends React.Component {
                                 <div className=" features-property-column">
                                     <ul>
                                         <li>
-                                            <i className="fas fa-bath"></i>
+                                            <i className="fa fa-bath"></i>
                                             1 Bathroom
                                         </li>
                                         <li>
@@ -126,7 +126,7 @@ class RentalsView extends React.Component {
                                             Furnished
                                         </li>
                                         <li>
-                                            <i className="fas fa-paw"></i>
+                                            <i className="fa fa-paw"></i>
                                             Pets considered
                                         </li>
                                     </ul>
@@ -153,7 +153,7 @@ class RentalsView extends React.Component {
 
                     </div>
                     <div className="col-xs">
-                        <div className="col-md single-property">
+                        <div className="col-md property-card">
                             <div className="home-title">
                                 <h5>Brookline | St. Mary's | Coolidge Corner</h5>
                                 <h3>Spacious Studio in Brownstone</h3>
@@ -183,7 +183,7 @@ class RentalsView extends React.Component {
                                 <div className=" features-property-column">
                                     <ul>
                                         <li>
-                                            <i className="fas fa-bath"></i>
+                                            <i className="fa fa-bath"></i>
                                             1 Bathroom
                                         </li>
                                         <li>
@@ -191,7 +191,7 @@ class RentalsView extends React.Component {
                                             Furnished
                                         </li>
                                         <li>
-                                            <i className="fas fa-paw"></i>
+                                            <i className="fa fa-paw"></i>
                                             Pets considered
                                         </li>
                                     </ul>

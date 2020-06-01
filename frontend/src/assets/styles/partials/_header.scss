@@ -1,6 +1,7 @@
 .site-logo {
   max-width: 100%;
 }
+
 .fixed-top {
   position: fixed;
   right: 0;
@@ -13,11 +14,18 @@
   }
 }
 
+
+
+
 .navbar {
   background-color: transparent;
   transition: all 0.5s ease-in-out;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+
+  @media (max-width: 992px) {
+    background: white;
+  }
 
   > .container {
     display: flex;
@@ -26,6 +34,7 @@
     justify-content: space-between;
     margin-bottom: 0 !important;
   }
+
   .navbar-brand img {
     max-width: 250px !important;
     @media (min-width: 700px) {
@@ -36,6 +45,7 @@
 
   .navbar-collapse {
     height: auto !important;
+
 
     @media (max-width: 991px) {
       background: $color-black;
@@ -49,7 +59,9 @@
       opacity: 0;
       transition: all 600ms cubic-bezier(0.62, 0.04, 0.3, 1.56);
       transition-delay: 100ms;
-
+      .nav-item {
+        margin: 10px;
+      }
       &.show {
         width: 250px;
         opacity: 1;
@@ -77,14 +89,16 @@
     outline: 0;
     box-shadow: none;
     z-index: 9;
-    position: relative;
+    position: absolute;
+    top: 25px;
+    right: 10px;
 
     > span {
       display: block;
       position: absolute;
       height: 2px;
       width: 100%;
-      background: #fff none repeat scroll 0% 0%;
+      background: $color-blue none repeat scroll 0% 0%;
       opacity: 1;
       top: 0;
       left: 0px;
@@ -94,22 +108,25 @@
 
       &:nth-child(1) {
         margin-top: 0px;
+        color: $color-blue;
       }
 
       &:nth-child(2) {
         margin-top: 7px;
         margin-right: 0px;
+        color: $color-blue;
       }
 
       &:nth-child(3) {
         margin-top: 14px;
+        color: $color-blue;
       }
 
     }
 
     &.collapsed {
       span {
-        background-color: #fff !important;
+        background-color: $color-blue !important;
 
         &:nth-child(1) {
           transform: rotate(135deg);
@@ -135,7 +152,7 @@
 
   .nav-link {
     @include font-size(14);
-    margin: 20px 0;
+
     font-weight: bold;
     line-height: normal;
     color: #0071AA;
@@ -210,6 +227,7 @@
   @media (min-width: 992px) {
     flex-wrap: nowrap;
     padding: 25px 0;
+
 
     &.sticky {
       padding: 19px 0px 18px 0;

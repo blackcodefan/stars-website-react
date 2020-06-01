@@ -22,11 +22,11 @@ class GuestReviewsView extends React.Component {
                             tincidunt."</p>
                         <div className="blockquote"><p>Name Surname</p>
                             <div className="star">
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
                             </div>
                         </div>
                     </div>
@@ -37,11 +37,11 @@ class GuestReviewsView extends React.Component {
                             tincidunt."</p>
                         <div className="blockquote"><p>Name Surname</p>
                             <div className="star">
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
                             </div>
                         </div>
 
@@ -53,11 +53,11 @@ class GuestReviewsView extends React.Component {
                             tincidunt."</p>
                         <div className="blockquote"><p>Name Surname</p>
                             <div className="star">
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
-                                <i className="fas fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
+                                <i className="fa fa-star"/>
                             </div>
                         </div>
                     </div>

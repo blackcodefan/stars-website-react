@@ -1,47 +1,45 @@
 import "./assets/styles/main.scss";
 
 import React from "react";
-import {BrowserRouter, Router, Route, Switch, Redirect} from "react-router-dom";
+import {BrowserRouter, Router, Route, Switch } from "react-router-dom";
 import {history} from "./_helper/history"
 
-import Home from "./pages/Home";
-import About from "./pages/About";
+import Homes from "./pages/Homes/Homes";
+import About from "./pages/About/About";
 import FooterView from "./components/layout/FooterView";
-import PropertyListing from "./pages/PropertyListing";
-import PropertyDetail from "./pages/PropertyDetail";
+import PropertyListing from "./pages/Property/PropertyListing";
+import PropertyDetail from "./pages/Property/PropertyDetail";
 import connect from "react-redux/es/connect/connect";
-import agent from "./_services/agent";
+import Locations from "./pages/Locations/Locations";
+import Medical from "./pages/Medical-Corporate/Medical";
 
 
-const App = () => {
-    React.useEffect(() => {
-        console.log('ComponentDidMount')
-        return () => {
-            const token = window.localStorage.getItem('jwt');
-            if (token) {
-                agent.setToken(token);
-            }
-        }
-    })
+class App extends React.Component {
 
-    return (
-        <>
-            <BrowserRouter>
-                <Router history={history}>
-                    <Switch>
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/home" component={Home}/>
-                        <Route path="/property-listing" component={PropertyListing}/>
-                        <Route path="/property-detail" component={PropertyDetail}/>
-                        <Route path="/about" component={About}/>
-                        <Route component={Error}/>
-                    </Switch>
-                </Router>
-            </BrowserRouter>
-            <FooterView/>
-        </>
-    );
-};
+    render() {
+        return (
+            <>
+                <BrowserRouter>
+                    <Router history={history}>
+                        <Switch>
+                            <Route exact path="/" component={Homes}/>
+                            <Route path="/homes" component={Homes}/>
+                            <Route path="/locations" component={Locations}/>
+                            <Route path="/medical" component={Medical}/>
+                            <Route path="/property" component={PropertyListing}/>
+                            <Route path="/property-detail" component={PropertyDetail}/>
+                            <Route path="/property/:id" component={PropertyDetail}/>
+                            <Route path="/about" component={About}/>
+                        </Switch>
+                    </Router>
+                </BrowserRouter>
+                <FooterView/>
+            </>
+        )
+    }
+
+
+}
 
 const mapStateToProps = state => {
     return {

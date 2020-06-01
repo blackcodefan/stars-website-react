@@ -8,12 +8,31 @@ import Container from "react-bootstrap/Container";
 import {connect} from "react-redux";
 import { animateScroll as scroll } from "react-scroll";
 import {history} from "../../_helper/history";
+import AOS from "aos";
+import $ from "jquery";
 
 
 class HeaderNavbar extends React.Component {
     constructor(props) {
         super(props)
         this.state = {}
+    }
+
+    componentDidMount() {
+        AOS.init({once: true});
+
+        let navElement = $("nav");
+
+        $(function () {
+            $(window).scrollTop() > navElement.innerHeight()
+                ? navElement.addClass("sticky")
+                : navElement.removeClass("sticky");
+        });
+        $(window).on("scroll", function () {
+            $(window).scrollTop() > navElement.innerHeight()
+                ? navElement.addClass("sticky")
+                : navElement.removeClass("sticky");
+        });
     }
 
     scrollTo = id => e => {
@@ -31,7 +50,6 @@ class HeaderNavbar extends React.Component {
     }
 
     render() {
-        const {user} = this.props
 
         return (
             <>
@@ -45,7 +63,7 @@ class HeaderNavbar extends React.Component {
                             <img src={logo} alt="logo"/>
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav">
-                            <span/>
+                            <span className="nav-span"/>
                             <span/>
                             <span/>
                         </Navbar.Toggle>
@@ -55,13 +73,13 @@ class HeaderNavbar extends React.Component {
                                 onSelect={ this.handleNav }
                             >
                                 <Nav.Item>
-                                    <Nav.Link href="/home">Home</Nav.Link>
+                                    <Nav.Link href="/homes">Homes</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="Locations">Locations</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="Medical/Corporate">Medical/Corporate</Nav.Link>
+                                    <Nav.Link eventKey="Medical">Medical/Corporate</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="Services">Services</Nav.Link>
@@ -76,7 +94,6 @@ class HeaderNavbar extends React.Component {
                                     <Nav.Link eventKey="Services">Contact</Nav.Link>
                                 </Nav.Item>
 
-                                {user ? <div>user.name</div> : ''}
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
@@ -94,18 +111,3 @@ const mapStateToProps = state => {
 
 
 export default connect(mapStateToProps)(HeaderNavbar);
-
-
-
-// {/*<Link*/}
-//
-// {/*className="nav-link"*/}
-// {/*activeClass="active"*/}
-// {/*to="/contact"*/}
-// {/*spy={true}*/}
-// {/*smooth={true}*/}
-// {/*offset={0}*/}
-// {/*duration={400}*/}
-// {/*>*/}
-// {/*Contact*/}
-// {/*</Link>*/}

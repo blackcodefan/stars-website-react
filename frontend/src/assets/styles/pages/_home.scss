@@ -1,12 +1,11 @@
-
 /**
 *    SEARCH BOX
  */
 .search-box {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255, 255, 255, 0.85);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.16);
   margin-top: 210px;
 }
 
@@ -30,19 +29,35 @@
   margin: 0 !important;
 }
 
+.search-box .input-group {
+  display: flex;
+  justify-content: center;
+}
 
+.search-box .input-group-prepend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  border: 1px solid #ced4da;
+  border-radius: 5px 0 0 5px !important;
+}
+
+.search-box .input-group .form-control {
+  border-radius: 0 5px 5px 0 !important;
+}
+
+.search-box .react-datepicker-wrapper {
+  margin: 0 auto;
+  display: block;
+}
 
 .search-box .react-datepicker-wrapper .input-group {
   display: flex;
   align-content: center;
 }
 
-.search-box .react-datepicker-wrapper i{
-  margin-top: 12px;
-  margin-left: 5px;
-}
-
-.search-box.react-datepicker-wrapper .form-control{
+.search-box.react-datepicker-wrapper .form-control {
 
 }
 
@@ -63,7 +78,6 @@
 }
 
 
-
 /**
 *   OVERVIEW
  */
@@ -78,8 +92,9 @@
   max-width: 370px;
   margin: 2rem 1rem;
   padding: 0;
-  border-radius: 8px;
-  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+  border-radius: 10px;
+  //box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .15);
   min-height: 550px;
 }
 
@@ -90,7 +105,7 @@
   padding: 0;
 }
 
-.overview-container h1{
+.overview-container h1 {
   text-align: center;
 }
 
@@ -126,7 +141,7 @@
 *   STARS EXPERIENCE
  */
 
-.stars-background h2{
+.stars-background h2 {
   text-align: center;
 }
 
@@ -141,7 +156,7 @@
 }
 
 .stars-item h4 {
-  font-family: raleway;
+  font-family: Raleway;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -203,7 +218,6 @@
 }
 
 
-
 /**
 *  EXPLORE LOCATIONS
  */
@@ -213,7 +227,7 @@
   min-height: 250px;
   max-width: 350px;
   border-radius: 8px;
-  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.16);
 }
 
 .location:hover {
@@ -272,18 +286,20 @@
   margin: 0;
 }
 
-.single-property {
+.property-card {
   max-width: 370px;
   min-width: 370px;
   padding: 0;
   border-radius: 8px;
-  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+  //box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .15);
   min-height: 455px;
   margin: 0 0.5rem 2rem 0.5rem;
 }
 
 .home-title {
-  background: linear-gradient(to top, rgba(0,113,170,1), rgba(0,113,170,0.2), transparent), url(../../images/example1.jpg) no-repeat center;
+  //linear-gradient(to top, rgba(0,113,170,1), rgba(0,113,170,0.2), transparent),
+  background: no-repeat center;
   background-size: cover;
   border-radius: 8px 8px 0 0;
   padding: 1.5rem;
@@ -315,11 +331,11 @@
   opacity: 0;
   transition: .2s ease;
   background: linear-gradient(to bottom, #0071AA, #0071AA, transparent), no-repeat center;
-  border-radius: 8px 8px 0 0 ;
+  border-radius: 8px 8px 0 0;
   cursor: pointer;
 }
 
-.single-property:hover .overlay {
+.property-card:hover .overlay {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -343,7 +359,7 @@
 
 .features-property ul li {
   font-size: 0.7rem;
-  margin: 1rem 0 ;
+  margin: 1rem 0;
 }
 
 .features-property ul li i {
@@ -424,7 +440,7 @@
   margin: 2rem 1rem;
   padding: 0;
   border-radius: 8px;
-  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.16);
   min-height: 300px;
 }
 
@@ -438,6 +454,12 @@
 
 .subscribe {
   padding: 1rem 0 2rem 0;
+}
+
+.subscribe input {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blockquote {

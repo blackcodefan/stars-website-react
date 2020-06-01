@@ -61,7 +61,7 @@ class SolutionView extends React.Component {
                                 <h3>Homes or Townhouses</h3>
                                 <p>Fully furnished houses and townhomes, perfect for Boston vacation rentals or
                                     temporary housing. A
-                                    great hotel alternative with all the privacy and comfort of your own home.<br/><br/>
+                                    great hotel alternative with all the privacy and comfort of your own home.<br/>
                                 </p>
                             </div>
                             <div className="overview-button">

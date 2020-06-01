@@ -61,7 +61,6 @@ class ExperienceView extends React.Component {
                                 experience</p>
                         </div>
                     </div>
-
                     <div className="container vip-services">
                         <h3>VIP Services</h3>
                         <div className="row">
