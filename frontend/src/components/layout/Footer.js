@@ -2,7 +2,7 @@ import React from "react";
 import logo from '../../assets/images/logo-horizontal.png'
 
 
-class FooterView extends React.Component {
+class Footer extends React.Component {
     constructor(props) {
         super(props)
         this.state = {}
@@ -24,38 +24,38 @@ class FooterView extends React.Component {
                             <div className="col-xl-5">
                                 <ul>
                                     <li>
-                                        <a href="services.html">Services</a>
+                                        <a href="">Services</a>
                                     </li>
                                     <li>
-                                        <a href="aboutus.html">About us</a>
+                                        <a href="">About us</a>
                                     </li>
                                     <li>
-                                        <a href="medicaltravel.html">Medical Travel</a>
+                                        <a href="">Medical Travel</a>
                                     </li>
                                     <li>
-                                        <a href="businesstravel.html">Business Travel</a>
+                                        <a href="">Business Travel</a>
                                     </li>
                                     <li>
-                                        <a href="faqs.html">FAQs</a>
+                                        <a href="">FAQs</a>
                                     </li>
                                 </ul>
                             </div>
                             <div className="col-xl">
                                 <ul>
                                     <li>
-                                        <a href="contactus.html">Contact us</a>
+                                        <a href="">Contact us</a>
                                     </li>
                                     <li>
-                                        <a href="blog.html">Blog</a>
+                                        <a href="">Blog</a>
                                     </li>
                                     <li>
-                                        <a href="termsandconditions.html">Terms & Conditions</a>
+                                        <a href="">Terms & Conditions</a>
                                     </li>
                                     <li>
-                                        <a href="privacypolicy.html">Privacy Policy</a>
+                                        <a href="">Privacy Policy</a>
                                     </li>
                                     <li>
-                                        <a href="refundpolicy.html">Refund Policy</a>
+                                        <a href="">Refund Policy</a>
                                     </li>
                                 </ul>
                             </div>
@@ -66,16 +66,16 @@ class FooterView extends React.Component {
                         <h5>Locations</h5>
                         <ul>
                             <li>
-                                <a href="brookline.html">Brookline</a>
+                                <a href="">Brookline</a>
                             </li>
                             <li>
-                                <a href="boston.html">Boston</a>
+                                <a href="">Boston</a>
                             </li>
                             <li>
-                                <a href="cambridge.html">Cambridge</a>
+                                <a href="">Cambridge</a>
                             </li>
                             <li>
-                                <a href="quincy.html">Quincy</a>
+                                <a href="">Quincy</a>
                             </li>
                         </ul>
                     </div>
@@ -84,16 +84,16 @@ class FooterView extends React.Component {
                         <h5>Explore</h5>
                         <ul>
                             <li>
-                                <a href="sports.html">Sports</a>
+                                <a href="">Sports</a>
                             </li>
                             <li>
-                                <a href="historicalsites.html">Historical Sites</a>
+                                <a href="">Historical Sites</a>
                             </li>
                             <li>
-                                <a href="events.html">Events</a>
+                                <a href="">Events</a>
                             </li>
                             <li>
-                                <a href="museums.html">Museums</a>
+                                <a href="">Museums</a>
                             </li>
                         </ul>
                     </div>
@@ -101,9 +101,9 @@ class FooterView extends React.Component {
                     <div className="col-xl">
                         <h5>Get in touch</h5>
                         <p className="social-icons">
-                            <a href="#"><i className="fa fa-instagram"></i></a>
-                            <a href="#"><i className="fa fa-twitter"></i></a>
-                            <a href="#"><i className="fa fa-facebook-f"></i></a>
+                            <a href="#"><i className="fa fa-instagram"/></a>
+                            <a href="#"><i className="fa fa-twitter"/></a>
+                            <a href="#"><i className="fa fa-facebook-f"/></a>
                         </p>
 
                         <p>
@@ -128,4 +128,4 @@ class FooterView extends React.Component {
     }
 }
 
-export default FooterView;
+export default Footer;

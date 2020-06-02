@@ -1,71 +1,52 @@
 /**
 *    SEARCH BOX
  */
+
 .search-box {
   background: rgba(255, 255, 255, 0.85);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.16);
-  margin-top: 210px;
-}
+  margin-top: 300px;
+
+  h1 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .row .col-sm {
+    margin: 0;
+    padding: 0 0.5rem;
+
+    .mb3 {
+      margin: 0 !important;
+    }
+  }
+
+  .form-control {
+    border-left: 1px solid #ced4da;
+  }
 
 
-.search-box-fix {
-  margin-top: 0;
-  padding: 2rem 2rem 1rem 2rem;
-  margin-bottom: 0;
-}
+  .react-datepicker-wrapper {
+    margin: 0 auto;
+    display: block;
 
-.search-box h1 {
-  margin: 0 0 0.5rem 0;
-}
+    .input-group {
+      display: flex;
+      align-content: center;
 
-.search-box .row .col-sm {
-  margin: 0;
-  padding: 0 0.5rem;
-}
+    }
 
-.search-box .row .col-sm .mb-3 {
-  margin: 0 !important;
-}
+    .form-control {
+      border: 1px solid #ced4da !important;
+    }
+  }
 
-.search-box .input-group {
-  display: flex;
-  justify-content: center;
-}
-
-.search-box .input-group-prepend {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 5px;
-  border: 1px solid #ced4da;
-  border-radius: 5px 0 0 5px !important;
-}
-
-.search-box .input-group .form-control {
-  border-radius: 0 5px 5px 0 !important;
-}
-
-.search-box .react-datepicker-wrapper {
-  margin: 0 auto;
-  display: block;
-}
-
-.search-box .react-datepicker-wrapper .input-group {
-  display: flex;
-  align-content: center;
-}
-
-.search-box.react-datepicker-wrapper .form-control {
-
-}
-
-@media (max-width: 992px) {
-  .search-box {
-    margin: 120px 0;
+  @media (max-width: 992px) {
+    margin: 200px 0;
   }
 }
+
 
 .small-header {
   padding-top: 0;
@@ -84,7 +65,7 @@
 
 
 .overview-container {
-  margin-top: 0;
+  margin-top: 100px;
   padding-top: 0;
 }
 
@@ -236,19 +217,19 @@
 }
 
 .location-title {
-  background-color: white;
-  border-radius: 8px;
-  text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .location-title h3 {
-  vertical-align: middle;
-  padding: 1rem;
+    vertical-align: middle;
+        padding: 1rem;
 }
 
 .brookline {
   background-size: cover;
-  background: url(../../images/brookline.jpg) center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../images/brookline.jpg) center;
 }
 
 .boston {
@@ -295,6 +276,12 @@
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .15);
   min-height: 455px;
   margin: 0 0.5rem 2rem 0.5rem;
+
+  svg {
+    font-size: 1rem;
+    color: #cbcbcb;
+    margin-right: 2px;
+  }
 }
 
 .home-title {

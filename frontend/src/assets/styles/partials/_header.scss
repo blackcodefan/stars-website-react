@@ -15,23 +15,22 @@
 }
 
 
-
-
 .navbar {
   background-color: transparent;
   transition: all 0.5s ease-in-out;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 
+
   @media (max-width: 992px) {
     background: white;
   }
 
   > .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    //display: flex;
+    //flex-wrap: wrap;
+    //align-items: center;
+    //justify-content: space-between;
     margin-bottom: 0 !important;
   }
 
@@ -73,7 +72,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    margin-bottom: 30px;
     @media (min-width: 992px) {
       flex-direction: row;
     }
@@ -155,7 +154,7 @@
 
     font-weight: bold;
     line-height: normal;
-    color: #0071AA;
+    color: #0071AA!important;
     position: relative;
     text-transform: uppercase;
     text-decoration: none;

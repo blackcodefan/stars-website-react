@@ -1,11 +1,7 @@
-import React, {useEffect} from "react";
-
-import AOS from "aos";
-import $ from "jquery";
+import React from "react";
 
 import HeaderNavbar from "../../components/layout/HeaderNavbar";
-import SearchBox from "../../components/sections/SearchBox";
-import boston from "../../assets/images/locations-boston.jpg";
+import imgBoston from "../../assets/images/locations-boston.jpg";
 
 
 class About extends React.Component {
@@ -14,7 +10,6 @@ class About extends React.Component {
             <header>
                 <section className="container-fluid main-background">
                     <HeaderNavbar/>
-                    <SearchBox/>
                 </section>
                 <div className="container">
                     <div id="boston" className="row mb-5">
@@ -39,8 +34,8 @@ class About extends React.Component {
                         </div>
 
                         <div className="col-sm-6">
-                            <img src={boston} className="locations-img"/>
-                        </div>g
+                            <img src={ imgBoston } className="location-card-img"/>
+                        </div>
                     </div>
                 </div>
 

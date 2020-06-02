@@ -24,6 +24,11 @@ class SearchBox extends React.Component {
         this.setState({
             checkInDate: value, // ISO String, ex: "2016-11-19T12:00:00.000Z"
         });
+        // compare checkin and checkout date
+        if (this.state.checkInDate < this.state.checkOutDate){
+            console.log("reset  checkout date")
+            this.setState({checkOutDate: ''})
+        }
     }
 
     handleCheckOutChange = (value, formattedValue) => {
@@ -60,6 +65,7 @@ class SearchBox extends React.Component {
     }
 
 
+
     render() {
         return (
             <div className="search-box container">
@@ -73,23 +79,23 @@ class SearchBox extends React.Component {
                             selected={this.state.checkInDate}
                             value={this.state.checkInDate}
                             minDate={new Date()}
-                            className="form-control border-left-0"
+                            className="form-control "
                             dateFormat="MM/dd/yyyy"
                             placeholderText="CheckIn"
                             customInput={<DatePickerInput/>}
-                            onChange={this.handleCheckInChange} />
+                            onChange={this.handleCheckInChange}/>
                     </div>
 
                     <div className='col-xs-6 col-sm-4 col-lg-2'>
                         <DatePicker
                             selected={this.state.checkOutDate}
                             value={this.state.checkOutDate}
-                            minDate={this.state.checkInDate===''?new Date():this.state.checkInDate}
-                            className="form-control border-left-0"
+                            minDate={this.state.checkInDate === '' ? new Date() : this.state.checkInDate}
+                            className="form-control "
                             dateFormat="MM/dd/yyyy"
                             placeholderText="CheckOut"
                             customInput={<DatePickerInput/>}
-                            onChange={this.handleCheckOutChange} />
+                            onChange={this.handleCheckOutChange}/>
                     </div>
 
                     <div className='col-xs-6 col-sm-4 col-lg-2'>
@@ -99,7 +105,7 @@ class SearchBox extends React.Component {
                             </div>
                             <input
                                 type="text"
-                                className="form-control border-left-0"
+                                className="form-control "
                                 placeholder="Adults"
                                 value={this.state.adultsCount}
                                 onChange={this.handleAdultsCountChange}
@@ -115,7 +121,7 @@ class SearchBox extends React.Component {
                             </div>
                             <input
                                 type="text"
-                                className="form-control border-left-0"
+                                className="form-control "
                                 placeholder="Children"
                                 value={this.state.childrenCount}
                                 onChange={this.handleChildrenCountChange}

@@ -15,7 +15,7 @@ const properties = [
         rentalParking: true,
         furnished: true,
         petsConsidered: true,
-        bgImgLink: "example1.png",
+        bgImgLink: "example1.jpg",
         category: "private"
     },
     {
@@ -29,7 +29,7 @@ const properties = [
         rentalParking: true,
         furnished: true,
         petsConsidered: true,
-        bgImgLink: "example1.png",
+        bgImgLink: "example2.jpg",
         category: "studio"
     },
     {
@@ -43,7 +43,7 @@ const properties = [
         rentalParking: true,
         furnished: true,
         petsConsidered: true,
-        bgImgLink: "example1.png",
+        bgImgLink: "example3.jpg",
         category: "1-bedroom"
     },
     {
@@ -57,7 +57,7 @@ const properties = [
         rentalParking: true,
         furnished: true,
         petsConsidered: true,
-        bgImgLink: "example1.png",
+        bgImgLink: "example2.jpg",
         category: "2-bedroom"
     },
     {
@@ -71,7 +71,7 @@ const properties = [
         rentalParking: true,
         furnished: true,
         petsConsidered: true,
-        bgImgLink: "example1.png",
+        bgImgLink: "example1.jpg",
         category: "2-bedroom"
     },
     {
@@ -85,7 +85,7 @@ const properties = [
         rentalParking: true,
         furnished: true,
         petsConsidered: true,
-        bgImgLink: "example1.png",
+        bgImgLink: "example3.jpg",
         category: "3-bedroom"
     },
     {
@@ -99,7 +99,7 @@ const properties = [
         rentalParking: true,
         furnished: true,
         petsConsidered: true,
-        bgImgLink: "example1.png",
+        bgImgLink: "example2.jpg",
         category: "private"
     },
 ]
@@ -112,6 +112,7 @@ class PropertyListing extends React.Component {
         super(props)
         this.state = {
             categories: [],
+            selectedCategory: '',
             properties: [],
             filteredProperties: []
         }
@@ -128,8 +129,12 @@ class PropertyListing extends React.Component {
 
     handleFilterClick = (key) => {
         console.log(key)
-        if (key === ""){this.setState({filteredProperties: this.state.properties})}
+        if (key === 'all'){
+            const filteredProperties = {...this.state.properties}
+            this.setState({filteredProperties: filteredProperties, selectedCategory: 'all'})
+        }
         this.setState({filteredProperties: this.state.properties.filter((property) => (property.category === key))})
+        this.setState({selectedCategory: key})
     }
 
     render() {
@@ -145,15 +150,15 @@ class PropertyListing extends React.Component {
 
                 <section className="container-fluid">
                     <div className="row container propertyfilterparent justify-content-between">
-                        <a
-                            href="#"
+                        <button
                             className="current col-md propertyfilter text-center"
-                            onClick={() => this.handleFilterClick("")}>
+                            onClick={() => this.handleFilterClick('all')}>
                             All
-                        </a>
+                        </button>
                         {
-                            this.state.categories.map(category => (
+                            this.state.categories.map((category, index) => (
                                 <button
+                                    key={index}
                                     className="current col-md propertyfilter text-center"
                                     onClick={() => this.handleFilterClick(category)}>
                                     {category}
@@ -164,11 +169,13 @@ class PropertyListing extends React.Component {
                 </section>
 
                 <section className="container-fluid">
-                    <div className="row container takealook-title">
+
+                    <div className="row container property-list-tab-title">
                         <div className="col-md ">
-                            <h2>Private Rooms</h2>
+                            <h2>{ this.state.selectedCategory === 'all' ? "All": this.state.selectedCategory }</h2>
                         </div>
                     </div>
+
                     <div className="row container">
                         {
                             this.state.filteredProperties.map((property, index) => (

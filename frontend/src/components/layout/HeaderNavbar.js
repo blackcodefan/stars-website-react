@@ -6,7 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 
 import {connect} from "react-redux";
-import { animateScroll as scroll } from "react-scroll";
+import {animateScroll as scroll} from "react-scroll";
 import {history} from "../../_helper/history";
 import AOS from "aos";
 import $ from "jquery";
@@ -15,14 +15,14 @@ import $ from "jquery";
 class HeaderNavbar extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            currentPath: ''
+        }
     }
 
     componentDidMount() {
         AOS.init({once: true});
-
         let navElement = $("nav");
-
         $(function () {
             $(window).scrollTop() > navElement.innerHeight()
                 ? navElement.addClass("sticky")
@@ -33,6 +33,8 @@ class HeaderNavbar extends React.Component {
                 ? navElement.addClass("sticky")
                 : navElement.removeClass("sticky");
         });
+
+        // this.setState({currentPath: history.getCurrentLocation()})
     }
 
     scrollTo = id => e => {
@@ -50,13 +52,13 @@ class HeaderNavbar extends React.Component {
     }
 
     render() {
-
         return (
             <>
                 <Navbar bg="none" expand="lg" fixed="top">
                     <Container>
                         <Navbar.Brand
                             href="#home"
+                            className="site-logo"
                             onClick={this.scrollTo("home")}
                             aria-label="Logo"
                         >
@@ -70,7 +72,7 @@ class HeaderNavbar extends React.Component {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav
                                 //defaultActiveKey="/home"
-                                onSelect={ this.handleNav }
+                                onSelect={this.handleNav}
                             >
                                 <Nav.Item>
                                     <Nav.Link href="/homes">Homes</Nav.Link>
@@ -93,7 +95,6 @@ class HeaderNavbar extends React.Component {
                                 <Nav.Item>
                                     <Nav.Link eventKey="Services">Contact</Nav.Link>
                                 </Nav.Item>
-
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

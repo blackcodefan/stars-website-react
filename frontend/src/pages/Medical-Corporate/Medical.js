@@ -4,7 +4,6 @@ import React from "react";
 import medical from "../../assets/images/medical.jpg"
 import corporate from "../../assets/images/corporate.jpg"
 import HeaderNavbar from "../../components/layout/HeaderNavbar";
-import {Col, Container, Image, Row} from "react-bootstrap";
 import icon1 from "../../assets/images/icons/icons_1.svg";
 import icon2 from "../../assets/images/icons/icons_2.svg";
 import icon3 from "../../assets/images/icons/icons_3.svg";
@@ -28,7 +27,7 @@ class Medical extends React.Component {
                 </header>
 
                 <div className="container">
-                    <div id="brookline" className="row  mb-5">
+                    <div id="brookline" className="row mb-lg-5 mt-lg-5 location-card">
                         <div className="col-sm-6">
                             <h2>Medical Stays</h2>
                             <p>
@@ -50,23 +49,23 @@ class Medical extends React.Component {
                                 time
                                 off being off!
                             </p>
-                            <button className="btn btn-block btn-outline-primary">EXPLORE OUR MEDICAL ACCOMMODATIONS
+                            <button className="btn btn-outline-primary">EXPLORE OUR MEDICAL ACCOMMODATIONS
                             </button>
 
                         </div>
                         <div className="col-sm-6">
-                            <img src={medical} className="locations-img"/>
+                            <img src={medical} className="location-card-img"/>
                         </div>
                     </div>
                     <h2>Next Level Medical Stays</h2>
                     <div className="row align-items-start">
                         <div className="stars-item col-sm-6 col-md-4">
-                            <Image className="stars-icon" src={hospital} alt="icon"/>
+                            <img className="stars-icon" src={hospital} alt="icon"/>
                             <h4>Access to Hospitals</h4>
                             <p>Your services are all close by public transit or private car</p>
                         </div>
                         <div className="stars-item col-sm-6 col-md-4">
-                            <Image className="stars-icon" src={kit} alt="icon"/>
+                            <img className="stars-icon" src={kit} alt="icon"/>
                             <h4>VISiTING HEALTHCARE</h4>
                             <p>Receive quality nursing, health aide and personal care assistance in the comfort of your
                                 rental*</p>
@@ -85,22 +84,22 @@ class Medical extends React.Component {
                             <div className="col-sm-8"><h2>Explore Our Medical Accommodations</h2>
                             </div>
                             <div className="col-sm-4">
-                                <button className="btn btn-block btn-outline-primary">BROWSE RENTALS</button>
+                                <button className="btn btn-outline-primary">BROWSE RENTALS</button>
                             </div>
                         </div>
                         <div className="row mb-5">
                             <div className="col-sm-4">
-                                <button className="btn btn-block btn-outline-primary explore">Turfts<br/> Medical Area
+                                <button className="btn btn-outline-primary explore">Turfts<br/> Medical Area
                                 </button>
                             </div>
                             <div className="col-sm-4">
                                 <button
-                                    className="btn btn-block btn-outline-primary explore">St.Elezabeth's<br/> Medical
+                                    className="btn btn-outline-primary explore">St.Elezabeth's<br/> Medical
                                     Area
                                 </button>
                             </div>
                             <div className="col-sm-4">
-                                <button className="btn btn-block btn-outline-primary explore">LongWood<br/> Medical Area
+                                <button className="btn btn-outline-primary explore">LongWood<br/> Medical Area
                                 </button>
                             </div>
                         </div>
@@ -109,9 +108,9 @@ class Medical extends React.Component {
                     </div>
                 </section>
                 <div className="container">
-                    <div id="brookline" className="row  mb-5">
+                    <div id="brookline" className="row mb-lg-5 location-card">
                         <div className="col-sm-6">
-                            <img src={corporate} className="locations-img"/>
+                            <img src={corporate} className="location-card-img"/>
                         </div>
                         <div className="col-sm-6">
                             <h2>Corporate Travel</h2>
@@ -127,7 +126,7 @@ class Medical extends React.Component {
                                 Wi-Fi and fully accessorized kitchens. We believe productivity and comfort are not
                                 mutually exclusive!
                             </p>
-                            <button className="btn btn-block btn-outline-primary">EXPLORE OUR CORPORATE ACCOMMODATIONS
+                            <button className="btn btn-outline-primary">EXPLORE OUR CORPORATE ACCOMMODATIONS
                             </button>
                         </div>
 

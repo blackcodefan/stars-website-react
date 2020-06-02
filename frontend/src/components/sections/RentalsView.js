@@ -1,6 +1,4 @@
 import React from "react";
-import {Image} from "react-bootstrap";
-import Icon1 from "/images/icons/icons_1.svg"
 
 class RentalsView extends React.Component {
     constructor(props) {
@@ -36,15 +34,15 @@ class RentalsView extends React.Component {
                                 <div className="features-property-column">
                                     <ul>
                                         <li>
-                                            <i className="fas fa-door-open"></i>
+                                            <i className="fas fa-door-open"/>
                                             1 Bedroom
                                         </li>
                                         <li>
-                                            <i className="fas fa-user-friends"></i>
+                                            <i className="fas fa-user-friends"/>
                                             Sleeps 2
                                         </li>
                                         <li>
-                                            <i className="fas fa-parking"></i>
+                                            <i className="fas fa-parking"/>
                                             Rental Parking
                                         </li>
                                     </ul>
@@ -53,15 +51,15 @@ class RentalsView extends React.Component {
                                 <div className="features-property-column">
                                     <ul>
                                         <li>
-                                            <i className="fa fa-bath"></i>
+                                            <i className="fa fa-bath"/>
                                             1 Bathroom
                                         </li>
                                         <li>
-                                            <i className="fas fa-couch"></i>
+                                            <i className="fas fa-couch"/>
                                             Furnished
                                         </li>
                                         <li>
-                                            <i className="fa fa-paw"></i>
+                                            <i className="fa fa-paw"/>
                                             Pets considered
                                         </li>
                                     </ul>
@@ -101,15 +99,15 @@ class RentalsView extends React.Component {
                                 <div className=" features-property-column">
                                     <ul>
                                         <li>
-                                            <i className="fas fa-door-open"></i>
+                                            <i className="fas fa-door-open"/>
                                             1 Bedroom
                                         </li>
                                         <li>
-                                            <i className="fas fa-user-friends"></i>
+                                            <i className="fas fa-user-friends"/>
                                             Sleeps 2
                                         </li>
                                         <li>
-                                            <i className="fas fa-parking"></i>
+                                            <i className="fas fa-parking"/>
                                             Rental Parking
                                         </li>
                                     </ul>
@@ -118,15 +116,15 @@ class RentalsView extends React.Component {
                                 <div className=" features-property-column">
                                     <ul>
                                         <li>
-                                            <i className="fa fa-bath"></i>
+                                            <i className="fa fa-bath"/>
                                             1 Bathroom
                                         </li>
                                         <li>
-                                            <i className="fas fa-couch"></i>
+                                            <i className="fas fa-couch"/>
                                             Furnished
                                         </li>
                                         <li>
-                                            <i className="fa fa-paw"></i>
+                                            <i className="fa fa-paw"/>
                                             Pets considered
                                         </li>
                                     </ul>
@@ -166,15 +164,15 @@ class RentalsView extends React.Component {
                                 <div className=" features-property-column">
                                     <ul>
                                         <li>
-                                            <i className="fas fa-door-open"></i>
+                                            <i className="fas fa-door-open"/>
                                             1 Bedroom
                                         </li>
                                         <li>
-                                            <i className="fas fa-user-friends"></i>
+                                            <i className="fas fa-user-friends"/>
                                             Sleeps 2
                                         </li>
                                         <li>
-                                            <i className="fas fa-parking"></i>
+                                            <i className="fas fa-parking"/>
                                             Rental Parking
                                         </li>
                                     </ul>
@@ -183,15 +181,15 @@ class RentalsView extends React.Component {
                                 <div className=" features-property-column">
                                     <ul>
                                         <li>
-                                            <i className="fa fa-bath"></i>
+                                            <i className="fa fa-bath"/>
                                             1 Bathroom
                                         </li>
                                         <li>
-                                            <i className="fas fa-couch"></i>
+                                            <i className="fas fa-couch"/>
                                             Furnished
                                         </li>
                                         <li>
-                                            <i className="fa fa-paw"></i>
+                                            <i className="fa fa-paw"/>
                                             Pets considered
                                         </li>
                                     </ul>

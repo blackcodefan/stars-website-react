@@ -1,12 +1,40 @@
 import React from 'react'
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import {history} from "../../_helper/history"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { faDoorOpen, faUserFriends, faParking, faBath, faCouch, faPaw } from "@fortawesome/free-solid-svg-icons"
+library.add(faDoorOpen,  faUserFriends, faParking, faBath, faCouch, faPaw )
 
 
 class PropertyCard extends React.Component {
-    constructor(props) {
+    constructor(props){
         super(props)
-        this.state = {}
+        this.state = {
+            src: ''
+        }
+    }
+
+    handleClick = (category) => {
+        history.push(`/property#${category}`)
+    }
+
+    componentDidMount() {
+        this.loadImage(this.props.bgImgLink)
+    }
+
+    componentDidUpdate(prevProps, prevState, nextProps) {
+        if (prevProps.bgImgLink !== this.props.bgImgLink) {
+            this.loadImage(this.props.bgImgLink)
+        }
+    }
+
+    loadImage(name) {
+        import(`../../assets/images/${name}`)
+            .then(image => {
+                console.log(image.default);
+                this.setState({src: image.default})
+            })
     }
 
     handleBookClick = (id) => {
@@ -24,15 +52,12 @@ class PropertyCard extends React.Component {
 
     render() {
         const {id, address, title, price, countBed, countSleep, rentalParking, countBath, furnished, petsConsidered, bgImgLink} = this.props
-        // const CardBackground = styled.div`
-        //     background-image: `url(${props => props.imgObj ? props.imgObj.url : 'PLACEHOLDERIMG.png'})` // this is where I think the problem is
-        // `
 
         return (
 
-            <div className="col-xs">
-                <div className="col-md property-card">
-                    <div className="home-title" style={{backgroundImage: `url(../../images/${bgImgLink})`}}>
+            <div className="col-xs-6 col-sm-4">
+                <div className="property-card">
+                    <div className="home-title" style={{backgroundImage: `url(${this.state.src !== ''?this.state.src:'placeholder.jpg'})`}}>
                         <h5>{address}</h5>
                         <h3>{title}</h3>
                     </div>
@@ -41,15 +66,17 @@ class PropertyCard extends React.Component {
                         <div className="features-property-column">
                             <ul>
                                 <li>
-                                    <i className="fa fa-door-open"></i>
+                                </li>
+                                <li>
+                                    <FontAwesomeIcon icon="door-open"/>
                                     {countBed} Bedroom
                                 </li>
                                 <li>
-                                    <i className="fa fa-user-friends"></i>
+                                    <FontAwesomeIcon icon="user-friends"/>
                                     Sleeps {countSleep}
                                 </li>
                                 <li>
-                                    <i className="fa fa-parking"></i>
+                                    <FontAwesomeIcon icon="parking"/>
                                     {
                                         rentalParking && "Rental Parking"
                                     }
@@ -60,17 +87,17 @@ class PropertyCard extends React.Component {
                         <div className="features-property-column">
                             <ul>
                                 <li>
-                                    <i className="fa fa-bath"></i>
+                                    <FontAwesomeIcon icon="bath"/>
                                     {countBath} Bathroom
                                 </li>
                                 <li>
-                                    <i className="fa fa-couch"></i>
+                                    <FontAwesomeIcon icon="couch"/>
                                     {
                                         furnished && "Furnished"
                                     }
                                 </li>
                                 <li>
-                                    <i className="fa fa-paw"></i>
+                                    <FontAwesomeIcon icon="paw"/>
                                     {
                                         petsConsidered && "Pets considered"
                                     }
@@ -79,7 +106,7 @@ class PropertyCard extends React.Component {
                         </div>
 
                         <div className="features-property-column price-property">
-                            <h4>{price}</h4>
+                            <h4>{price} $</h4>
                             <p>per night</p>
                         </div>
                     </div>

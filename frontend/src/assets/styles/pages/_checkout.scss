@@ -50,9 +50,9 @@
 }
 
 .booking-information {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
-  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.16);
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.16);
 }
 
 .booking-images {
@@ -73,10 +73,10 @@
   margin: 4.3rem 0rem 0.5rem 0.4rem;
 }
 
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open>.dropdown-toggle.btn-secondary {
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
   color: #0071AA;
   background-color: rgba(255, 255, 255, 0.85) !important;
-  transition:0s;
+  transition: 0s;
 }
 
 .checkout-titles {
@@ -119,6 +119,10 @@
   color: #7ecabf;
 }
 
+.property-details-buttons {
+
+}
+
 .property-details-buttons .btn {
   height: 3rem;
   border: 1px solid #E8C36A !important;
@@ -126,6 +130,11 @@
   border-radius: 10px;
   color: #707070;
   min-width: 12rem;
+}
+
+.details-buttons {
+  display: flex;
+  justify-content: space-around;
 }
 
 .button-icon360 {
@@ -140,15 +149,15 @@
   color: #707070;
 }
 
-.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active, .btn-outline-secondary.active, .open>.dropdown-toggle.btn-outline-secondary {
+.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active, .btn-outline-secondary.active, .open > .dropdown-toggle.btn-outline-secondary {
   color: white;
   background-color: #E8C36A !important;
-  transition:0s;
+  transition: 0s;
 }
 
 .icon360 {
   background: url(../../images/icons/360-degrees.svg) no-repeat;
-  color:#0071AA;
+  color: #0071AA;
   background-size: cover;
   display: inline-block;
   margin: 0 auto;
@@ -158,10 +167,10 @@
 
 .icon360-2 {
   background: url(../../images/icons/360-degrees-2.svg) no-repeat;
-  color:#0071AA;
+  color: #0071AA;
   background-size: cover;
   display: inline-block;
-  margin: 3px auto;
+  margin: 0 auto;
   height: 40px;
   width: 80px;
 }
@@ -178,6 +187,12 @@
 
 .details-icons {
   font-size: 0.8rem;
+
+  svg {
+    font-size: 1rem;
+    color: #cbcbcb;
+    margin-right: 2px;
+  }
 }
 
 .details-icons span {
