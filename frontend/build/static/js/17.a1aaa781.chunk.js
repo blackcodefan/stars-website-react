@@ -1,0 +1,2 @@
+(this.webpackJsonpstarsofboston=this.webpackJsonpstarsofboston||[]).push([[17],{602:function(s,o,t){s.exports=t.p+"static/media/boston-3.330f8bc3.jpg"}}]);
+//# sourceMappingURL=17.a1aaa781.chunk.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["assets/images/starsofboston.jpg"],"names":["module","exports"],"mappings":"oGAAAA,EAAOC,QAAU,IAA0B","file":"static/js/28.0f4013b1.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/starsofboston.a20d0441.jpg\";"],"sourceRoot":""}
