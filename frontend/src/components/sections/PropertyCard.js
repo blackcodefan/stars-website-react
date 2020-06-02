@@ -39,15 +39,15 @@ class PropertyCard extends React.Component {
 
     handleBookClick = (id) => {
         history.push(
-            `/book/${id}`
+            `/checkout`
         )
     }
 
     handlePropertyClick = (id) => {
-        // history.push(
-        //     `/property/${id}`
-        // )
-        history.push(`/property-detail`)
+        history.push(
+            `/property/${id}`
+        )
+        // history.push(`/property-detail`)
     }
 
     render() {

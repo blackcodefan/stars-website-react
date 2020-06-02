@@ -10,8 +10,6 @@ import "font-awesome/css/font-awesome.css"
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import React from 'react';
-// import { Route, Switch } from 'react-router-dom';
-// import { ConnectedRouter } from 'react-router-redux';
 import { history } from "./_helper/history";
 import { store } from './_helper/store';
 import App from './App';

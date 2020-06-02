@@ -4,9 +4,7 @@ import DatePicker from "react-datepicker";
 class DateRangePicker extends React.Component {
     constructor(props, context) {
         super(props, context);
-// DatePicker is a controlled component.
-// This means that you need to provide an input value
-// and an onChange handler that updates this value.
+
     }
     render() {
         return <DatePicker
@@ -26,4 +24,5 @@ class DateRangePicker extends React.Component {
         />
     }
 }
+
 export default DateRangePicker;

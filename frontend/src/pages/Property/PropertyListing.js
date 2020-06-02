@@ -33,7 +33,7 @@ const properties = [
         category: "studio"
     },
     {
-        id: 2,
+        id: 3,
         address: "Brookline | St. Mary's | Coolidge Corner",
         title: "Spacious Studio in Brownstone",
         price: "99",
@@ -47,7 +47,7 @@ const properties = [
         category: "1-bedroom"
     },
     {
-        id: 2,
+        id: 4,
         address: "Brookline | St. Mary's | Coolidge Corner",
         title: "Spacious Studio in Brownstone",
         price: "99",
@@ -61,7 +61,7 @@ const properties = [
         category: "2-bedroom"
     },
     {
-        id: 2,
+        id: 5,
         address: "Brookline | St. Mary's | Coolidge Corner",
         title: "Spacious Studio in Brownstone",
         price: "99",
@@ -75,7 +75,7 @@ const properties = [
         category: "2-bedroom"
     },
     {
-        id: 2,
+        id: 6,
         address: "Brookline | St. Mary's | Coolidge Corner",
         title: "Spacious Studio in Brownstone",
         price: "99",
@@ -89,7 +89,7 @@ const properties = [
         category: "3-bedroom"
     },
     {
-        id: 3,
+        id: 7,
         address: "Brookline | St. Mary's | Coolidge Corner",
         title: "Spacious Studio in Brownstone",
         price: "99",
