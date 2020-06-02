@@ -1,0 +1,2 @@
+(this.webpackJsonpstarsofboston=this.webpackJsonpstarsofboston||[]).push([[8],{616:function(s,o,t){s.exports=t.p+"static/media/icons_agreement.84d96c97.svg"}}]);
+//# sourceMappingURL=8.fc04e191.chunk.js.map

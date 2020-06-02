@@ -1,0 +1,105 @@
+/** PROPERTY DETAILS **/
+
+
+#property-details-background {
+  padding-bottom: 1rem;
+}
+
+.property-details-title {
+  margin-top: 250px;
+  padding: 0 auto;
+}
+
+//.property-details-title::before {
+//  content: "";
+//  position: absolute;
+//  top: -20px;
+//  left: 0;
+//  width: 200%;
+//  height: 200%;
+//  background: inherit;
+//  background-attachment: fixed;
+//  -webkit-filter: blur(4px);
+//  filter: blur(4px);
+//}
+//
+//.property-details-title::after {
+//  content: "";
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  background: rgba(0, 0, 0, 0.25)
+//}
+
+.property-details-title h1 {
+  color: white;
+  font-weight: bold;
+  margin: 8rem 0 0.2rem;
+}
+
+.property-details-title p {
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.property-details-title button {
+  min-width: 0;
+}
+
+.btn-outline-secondary {
+  border: 1px solid #E8C36A !important;
+  border-radius: 500px;
+  color: #707070;
+  min-width: 7rem;
+}
+
+.btn-outline-secondary i {
+  color: #707070;
+}
+
+.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active, .btn-outline-secondary.active, .open > .dropdown-toggle.btn-outline-secondary {
+  color: white;
+  background-color: #E8C36A !important;
+  transition: 0s;
+}
+
+
+.check-form {
+  padding: 20px !important;
+
+  .form-control {
+    border-left: 1px solid #ced4da !important;
+  }
+
+
+  .react-datepicker-wrapper {
+    margin: 0 auto;
+    display: block;
+
+    .input-group {
+      display: flex;
+      align-content: center;
+
+    }
+
+    .form-control {
+      border: 1px solid #ced4da !important;
+    }
+  }
+
+}
+
+ul.nav {
+  border-bottom: none !important;
+
+  .btn-outline-primary {
+    line-height: 30px;
+  }
+}
+
+

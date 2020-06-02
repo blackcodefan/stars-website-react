@@ -1,0 +1,2 @@
+(this.webpackJsonpstarsofboston=this.webpackJsonpstarsofboston||[]).push([[10],{618:function(s,o,t){s.exports=t.p+"static/media/icons_hospital.93b77503.svg"}}]);
+//# sourceMappingURL=10.56c468f2.chunk.js.map

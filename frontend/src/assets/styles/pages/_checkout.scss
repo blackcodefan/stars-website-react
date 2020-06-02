@@ -1,0 +1,215 @@
+/** CHECKOUT **/
+
+
+.checkout-booking-info h6 {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.checkout-booking-info p {
+  padding: 0rem 0 1rem 0;
+}
+
+.checkout-booking-info h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.checkout-booking-info h5 {
+  color: #2A2A2A;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.checkout-booking-info ul li {
+  padding: 0.3rem 0;
+}
+
+.checkout-booking-info .button {
+  margin: 1rem 0 1rem 0;
+}
+
+.small-checkout-link {
+  text-align: center;
+}
+
+.small-checkout-link a {
+  font-size: 0.7rem;
+}
+
+
+.border1 {
+  border-top: 1px solid #D8D8D8;
+  margin: 1.5rem 2rem 2.5rem 2rem;
+}
+
+.checkout-box {
+  position: sticky;
+}
+
+.booking-information {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.16);
+}
+
+.booking-images {
+  background: url(../../images/booking-image.jpg) no-repeat center;
+  background-size: contain;
+  height: 7.8rem;
+}
+
+.btn-secondary {
+  background: rgba(232, 195, 106, 0.85) !important;
+  border: 0;
+  border-radius: 10px;
+  height: 2.6rem;
+  margin: 4.3rem 0rem 0.5rem 1rem;
+}
+
+.btn-secondary-2 {
+  margin: 4.3rem 0rem 0.5rem 0.4rem;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
+  color: #0071AA;
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  transition: 0s;
+}
+
+.checkout-titles {
+  margin: 1.8rem;
+}
+
+.checkout-boxes {
+  margin: 1rem;
+}
+
+.checkout-boxes .col-sm ul li {
+  margin-bottom: 1rem;
+}
+
+.checkout-title {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.checkout-subtitle {
+  font-family: raleway;
+  font-weight: normal;
+  color: #707070;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.checkout-contact {
+  padding: 1rem 0 2rem 0;
+}
+
+.property-details .col-md {
+  margin: 0;
+  padding: 0;
+}
+
+.property-details .col-md ul li i {
+  margin-right: 0.5rem;
+  color: #7ecabf;
+}
+
+.property-details-buttons {
+
+}
+
+.property-details-buttons .btn {
+  height: 3rem;
+  border: 1px solid #E8C36A !important;
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: #707070;
+  min-width: 12rem;
+}
+
+.details-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-icon360 {
+  min-width: 3rem !important;
+}
+
+.icons-bedroom-details img {
+  max-width: 2.5rem;
+}
+
+.btn-outline-secondary i {
+  color: #707070;
+}
+
+.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active, .btn-outline-secondary.active, .open > .dropdown-toggle.btn-outline-secondary {
+  color: white;
+  background-color: #E8C36A !important;
+  transition: 0s;
+}
+
+.icon360 {
+  background: url(../../images/icons/360-degrees.svg) no-repeat;
+  color: #0071AA;
+  background-size: cover;
+  display: inline-block;
+  margin: 0 auto;
+  height: 30px;
+  width: 30px;
+}
+
+.icon360-2 {
+  background: url(../../images/icons/360-degrees-2.svg) no-repeat;
+  color: #0071AA;
+  background-size: cover;
+  display: inline-block;
+  margin: 0 auto;
+  height: 40px;
+  width: 80px;
+}
+
+.property-details-buttons .btn {
+  color: white;
+}
+
+.button-icon360 {
+  color: white;
+  margin: 0;
+  padding: 0 0.7rem;
+}
+
+.details-icons {
+  font-size: 0.8rem;
+
+  svg {
+    font-size: 1rem;
+    color: #cbcbcb;
+    margin-right: 2px;
+  }
+}
+
+.details-icons span {
+  margin: 0 1rem 1rem 0;
+}
+
+.details-icons span i {
+  margin: 0 0.5rem 0 0;
+}
+
+.details-buttons .btn {
+  height: 3rem;
+  border: 1px solid #E8C36A !important;
+  border-radius: 15px;
+  color: #0071AA;
+  min-width: 8rem;
+  font-size: 0.7rem;
+  font-weight: normal;
+  margin: 1.2rem 0;
+}

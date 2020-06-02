@@ -1,0 +1,96 @@
+/** SEARCH RESULTS **/
+
+
+.propertyfilter .col-md {
+  padding: 1rem;
+}
+
+.propertyfilterparent {
+  margin: 50px auto 0;
+  padding: 0;
+}
+
+.propertyfilter {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.propertyfilter:hover {
+  text-decoration: none;
+  color: #707070;
+  font-weight: bold;
+}
+
+.propertyfilter:active {
+  text-decoration: none;
+  color: #0071AA;
+  font-weight: bold;
+}
+
+.propertyfilter::before {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: -2px;
+  position: absolute;
+  background: #E8C36A;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 100%;
+}
+
+.propertyfilter::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #707070;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.propertyfilter:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.propertyfilter:active::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 8px;
+  left: 0;
+  position: absolute;
+  background: #0071AA;
+  width: 100%;
+}
+
+.icon-button{
+  padding: 0 0.5rem;
+  margin-top: 1rem !important;
+}
+
+.btn-floating {
+  width: 61.1px;
+  height: 61.1px;
+}
+
+.btn-floating.btn-lg i {
+  font-size: 1.625rem;
+  line-height: 61.1px;
+}
+.btn-floating i {
+  display: inline-block;
+  width: inherit;
+  color: #fff;
+  text-align: center;
+}
+
+.property-list-tab-title {
+}
