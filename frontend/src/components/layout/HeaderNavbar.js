@@ -75,7 +75,7 @@ class HeaderNavbar extends React.Component {
                                 onSelect={this.handleNav}
                             >
                                 <Nav.Item>
-                                    <Nav.Link href="/homes">Homes</Nav.Link>
+                                    <Nav.Link eventKey="Homes">Homes</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="Locations">Locations</Nav.Link>
@@ -93,7 +93,7 @@ class HeaderNavbar extends React.Component {
                                     <Nav.Link eventKey="About">About</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="Services">Contact</Nav.Link>
+                                    <Nav.Link eventKey="Contact">Contact</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </Navbar.Collapse>

@@ -1,16 +1,51 @@
 import React from 'react'
 import HeaderNavbar from "../../components/layout/HeaderNavbar";
 import {history} from "../../_helper/history"
-
+import {currentPropertyAction} from "../../redux/actions";
+import {connect} from "react-redux";
+import BookingForm from "../../components/elements/BookingForm";
 
 
 class CheckOutFirstPage extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            currentProperty: {
+                id: this.props.match.params.id,
+                address: '',
+                title: '',
+                dailyFee: '',
+                cleaningFee: '',
+                serviceFee: '',
+                tax: '',
+            },
+            guest: {
+                firstName: '',
+                lastName: '',
+                email: '',
+                phoneNumber: ''
+            },
+            booking: {
+                checkInDate: '',
+                checkOutDate: '',
+                adultsCount: '',
+                childrenCount: '',
+                days: '',
+                total: ''
+            }
+        }
+    }
+
+    componentDidMount() {
+        this.props.getPropertyDetail(this.props.match.params.id)
+    }
+
+    componentWillReceiveProps(nextProps, nextContext) {
+        this.setState({currentProperty: nextProps.currentProperty})
     }
 
     handleContinue = () => {
-        history.push("checkout-review")
+        history.push("/checkout-review")
     }
 
     render() {
@@ -109,12 +144,17 @@ class CheckOutFirstPage extends React.Component {
                                         </div>
 
                                         <div className="checkout-titles">
-                                            <h3 className="checkout-title">Sunny Top Floor Private Room</h3>
-                                            <h5 className="checkout-subtitle">Brookline | st. Mary's | coolidge
-                                                corner</h5>
+                                            <h3 className="checkout-title">{ this.state.currentProperty.title }</h3>
+                                            <h5 className="checkout-subtitle">{ this.state.currentProperty.address}</h5>
                                         </div>
 
                                         <div className="row checkout-boxes">
+                                            {/*<BookingForm*/}
+                                            {/*checkInDate={this.state.booking.checkInDate}*/}
+                                            {/*checkOutDate={this.state.booking.checkOutDate}*/}
+                                            {/*adultsCount={this.state.booking.adultsCount}*/}
+                                            {/*childrenCount={this.state.booking.childrenCount}*/}
+                                            {/*/>*/}
                                             <div className='col-lg'>
                                                 <div className="input-group mb-3">
                                                     <div className="input-group-prepend">
@@ -174,11 +214,11 @@ class CheckOutFirstPage extends React.Component {
                                             </div>
                                             <div className='col-sm text-right'>
                                                 <ul>
-                                                    <li>$200</li>
-                                                    <li>$20</li>
-                                                    <li>$20</li>
-                                                    <li>$20</li>
-                                                    <li><b>$300</b></li>
+                                                    <li>${this.state.currentProperty.dailyFee * this.state.booking.days}</li>
+                                                    <li>${this.state.currentProperty.cleaningFee}</li>
+                                                    <li>${this.state.currentProperty.serviceFee}</li>
+                                                    <li>${this.state.currentProperty.tax}</li>
+                                                    <li><b>${this.state.booking.total}</b></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -218,4 +258,16 @@ class CheckOutFirstPage extends React.Component {
 
 }
 
-export default CheckOutFirstPage
+
+const mapStateToProps = (state) => {
+    const {currentProperty} = state;
+    return {
+        currentProperty
+    }
+}
+
+const mapDispatchToProps = dispatch => ({
+    getPropertyDetail: (id) => dispatch(currentPropertyAction.getPropertyDetail(id))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CheckOutFirstPage)

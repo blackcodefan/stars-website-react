@@ -1,143 +1,83 @@
 import React from "react";
-import HeaderNavbar from "../../components/layout/HeaderNavbar";
-import SearchBox from "../../components/sections/SearchBox";
-import PropertyCard from "../../components/sections/PropertyCard";
+import queryString from 'query-string'
 
-const properties = [
-    {
-        id: 1,
-        address: "Brookline | St. Mary's | Coolidge Corner",
-        title: "Spacious Studio in Brownstone",
-        price: "99",
-        countBed: 2,
-        countSleep: 2,
-        countBath: 2,
-        rentalParking: true,
-        furnished: true,
-        petsConsidered: true,
-        bgImgLink: "example1.jpg",
-        category: "private"
-    },
-    {
-        id: 2,
-        address: "Brookline | St. Mary's | Coolidge Corner",
-        title: "Spacious Studio in Brownstone",
-        price: "99",
-        countBed: 2,
-        countSleep: 2,
-        countBath: 2,
-        rentalParking: true,
-        furnished: true,
-        petsConsidered: true,
-        bgImgLink: "example2.jpg",
-        category: "studio"
-    },
-    {
-        id: 3,
-        address: "Brookline | St. Mary's | Coolidge Corner",
-        title: "Spacious Studio in Brownstone",
-        price: "99",
-        countBed: 2,
-        countSleep: 2,
-        countBath: 2,
-        rentalParking: true,
-        furnished: true,
-        petsConsidered: true,
-        bgImgLink: "example3.jpg",
-        category: "1-bedroom"
-    },
-    {
-        id: 4,
-        address: "Brookline | St. Mary's | Coolidge Corner",
-        title: "Spacious Studio in Brownstone",
-        price: "99",
-        countBed: 2,
-        countSleep: 2,
-        countBath: 2,
-        rentalParking: true,
-        furnished: true,
-        petsConsidered: true,
-        bgImgLink: "example2.jpg",
-        category: "2-bedroom"
-    },
-    {
-        id: 5,
-        address: "Brookline | St. Mary's | Coolidge Corner",
-        title: "Spacious Studio in Brownstone",
-        price: "99",
-        countBed: 2,
-        countSleep: 2,
-        countBath: 2,
-        rentalParking: true,
-        furnished: true,
-        petsConsidered: true,
-        bgImgLink: "example1.jpg",
-        category: "2-bedroom"
-    },
-    {
-        id: 6,
-        address: "Brookline | St. Mary's | Coolidge Corner",
-        title: "Spacious Studio in Brownstone",
-        price: "99",
-        countBed: 2,
-        countSleep: 2,
-        countBath: 2,
-        rentalParking: true,
-        furnished: true,
-        petsConsidered: true,
-        bgImgLink: "example3.jpg",
-        category: "3-bedroom"
-    },
-    {
-        id: 7,
-        address: "Brookline | St. Mary's | Coolidge Corner",
-        title: "Spacious Studio in Brownstone",
-        price: "99",
-        countBed: 2,
-        countSleep: 2,
-        countBath: 2,
-        rentalParking: true,
-        furnished: true,
-        petsConsidered: true,
-        bgImgLink: "example2.jpg",
-        category: "private"
-    },
-]
-const categories = [
-    "private", "studio", "1-bedroom", "2-bedroom", "3-bedroom"
-]
+import HeaderNavbar from "../../components/layout/HeaderNavbar";
+import SearchBox from "../../components/layout/SearchBox";
+import PropertyCard from "../../components/sections/PropertyCard";
+import {Spinner} from "react-bootstrap";
+import {connect} from "react-redux";
+import {propertyAction} from "../../redux/actions/property.actions";
+
 
 class PropertyListing extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            loading: false,
+            activeCategory: 'all',
             categories: [],
-            selectedCategory: '',
-            properties: [],
-            filteredProperties: []
+            properties: []
         }
     }
 
     componentDidMount() {
-        this.setState({
-            categories: categories,
-            properties: properties,
-            filteredProperties: properties
-        })
+        console.log("componentWillMount")
+        this.setState({loading: true})
+        this.props.getAllProperties()
+        this.props.getAllCategories()
+        this.setState({loading: false})
+    }
 
+    componentWillReceiveProps(nextProps, nextContext) {
+        console.log("============nextProps=========", nextProps)
+
+        this.setState({properties: nextProps.property.items}, () => {
+            console.log('this.state', this.state)
+        });
+        this.setState({categories: nextProps.property.categories})
+    }
+
+    updateQueryString(newValues) {
+        let currentQS = queryString.parse(this.props.location.search);
+        let newQS = {...currentQS, ...newValues};
+        this.props.history.push("/property/?" + queryString.stringify(newQS));
+        return newQS
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+
+        let currentQS = queryString.parse(this.props.location.search);
+        let oldQS = queryString.parse(prevProps.location.search);
+
+        let areSameObjects = (a, b) => {
+            if (Object.keys(a).length !== Object.keys(b).length) return false;
+            for (let key in a) {
+                if (a[key] !== b[key]) return false;
+            }
+            return true;
+        }
+
+        if (!areSameObjects(currentQS, oldQS)) {
+            this.props.getFilteredProperties(currentQS)
+        }
     }
 
     handleFilterClick = (key) => {
-        console.log(key)
-        if (key === 'all'){
-            const filteredProperties = {...this.state.properties}
-            this.setState({filteredProperties: filteredProperties, selectedCategory: 'all'})
+        if (key === 'all') {
+            this.props.getAllProperties()
+
+        } else {
+            this.updateQueryString({category: key})
         }
-        this.setState({filteredProperties: this.state.properties.filter((property) => (property.category === key))})
-        this.setState({selectedCategory: key})
+        this.setState({activeCategory: key})
     }
 
     render() {
+        const {properties, categories} = this.state;
+
+        if (this.state.loading) {
+            return (<Spinner animation="border"/>)
+        }
 
         return (
             <>
@@ -150,16 +90,13 @@ class PropertyListing extends React.Component {
 
                 <section className="container-fluid">
                     <div className="row container propertyfilterparent justify-content-between">
-                        <button
-                            className="current col-md propertyfilter text-center"
-                            onClick={() => this.handleFilterClick('all')}>
-                            All
-                        </button>
+
+
                         {
-                            this.state.categories.map((category, index) => (
+                            categories && ['all', ...categories].map((category, index) => (
                                 <button
                                     key={index}
-                                    className="current col-md propertyfilter text-center"
+                                    className={this.state.activeCategory === category ? 'col-md propertyfilter text-center activeTab' : 'col-md propertyfilter text-center'}
                                     onClick={() => this.handleFilterClick(category)}>
                                     {category}
                                 </button>
@@ -172,13 +109,14 @@ class PropertyListing extends React.Component {
 
                     <div className="row container property-list-tab-title">
                         <div className="col-md ">
-                            <h2>{ this.state.selectedCategory === 'all' ? "All": this.state.selectedCategory }</h2>
+                            <h2>{this.state.activeCategory.charAt(0).toUpperCase() + this.state.activeCategory.slice(1)}</h2>
                         </div>
+                        <hr className="border1"/>
                     </div>
 
                     <div className="row container">
                         {
-                            this.state.filteredProperties.map((property, index) => (
+                            properties && properties.map((property, index) => (
                                 <PropertyCard
                                     key={index}
                                     id={property.id}
@@ -201,8 +139,21 @@ class PropertyListing extends React.Component {
         )
     }
 
-
 }
 
 
-export default PropertyListing
+const mapStateToProps = state => {
+    const {property} = state;
+    console.log("========property======", property)
+    return {
+        property
+    }
+}
+
+const mapDispatchToProps = dispatch => ({
+    getAllProperties: () => dispatch(propertyAction.getAllProperties()),
+    getAllCategories: () => dispatch(propertyAction.getAllCatetories()),
+    getFilteredProperties: (terms) => dispatch(propertyAction.getFilteredProperties(terms))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(PropertyListing);

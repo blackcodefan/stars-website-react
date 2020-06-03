@@ -8,24 +8,39 @@
 .propertyfilterparent {
   margin: 50px auto 0;
   padding: 0;
+  border-bottom: 2px solid $color-yellow!important;
 }
 
 .propertyfilter {
   text-decoration: none;
+  text-transform: capitalize;
+  color: $color-blue!important;
   padding: 1rem;
   font-size: 1rem;
+  background: transparent;
+  border: 1px solid $color-yellow!important;
+  border-bottom: none!important;
+  border-radius: 5px 5px 0 0!important;
+  margin: 0 5px;
+
 }
 
 .propertyfilter:hover {
   text-decoration: none;
   color: #707070;
   font-weight: bold;
+
 }
 
 .propertyfilter:active {
-  text-decoration: none;
+  text-decoration: none!important;
   color: #0071AA;
   font-weight: bold;
+}
+
+.activeTab{
+  background-color: $color-yellow;
+  border-radius: 5px;
 }
 
 .propertyfilter::before {
@@ -49,7 +64,6 @@
   height: 3px;
   left: 50%;
   position: absolute;
-  background: #707070;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
@@ -64,7 +78,7 @@
   bottom: 0;
   content: "";
   display: block;
-  height: 8px;
+  height: 2px;
   left: 0;
   position: absolute;
   background: #0071AA;

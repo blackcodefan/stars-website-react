@@ -9,7 +9,7 @@ class CheckOutSecondPage extends React.Component {
     }
 
     handleContinue = () => {
-        history.push("checkout-payment")
+        history.push("/checkout-payment")
     }
 
     render() {

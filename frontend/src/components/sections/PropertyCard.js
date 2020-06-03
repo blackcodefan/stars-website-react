@@ -1,14 +1,14 @@
 import React from 'react'
-// import styled from 'styled-components';
+import propTypes from 'prop-types'
 import {history} from "../../_helper/history"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { faDoorOpen, faUserFriends, faParking, faBath, faCouch, faPaw } from "@fortawesome/free-solid-svg-icons"
-library.add(faDoorOpen,  faUserFriends, faParking, faBath, faCouch, faPaw )
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {library} from "@fortawesome/fontawesome-svg-core"
+import {faDoorOpen, faUserFriends, faParking, faBath, faCouch, faPaw} from "@fortawesome/free-solid-svg-icons"
+library.add(faDoorOpen, faUserFriends, faParking, faBath, faCouch, faPaw)
 
 
 class PropertyCard extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             src: ''
@@ -30,16 +30,21 @@ class PropertyCard extends React.Component {
     }
 
     loadImage(name) {
-        import(`../../assets/images/${name}`)
-            .then(image => {
-                console.log(image.default);
+        import(`../../assets/images/${name}`).then(image => {
+            console.log(image.default);
+            this.setState({src: image.default})
+        }).catch(error => {
+            console.log(error)
+            import(`../../assets/images/card-placeholder.jpg`).then(image => {
                 this.setState({src: image.default})
             })
+        })
+
     }
 
     handleBookClick = (id) => {
         history.push(
-            `/checkout`
+            `/checkout/${id}`
         )
     }
 
@@ -51,13 +56,14 @@ class PropertyCard extends React.Component {
     }
 
     render() {
-        const {id, address, title, price, countBed, countSleep, rentalParking, countBath, furnished, petsConsidered, bgImgLink} = this.props
+        const {id, address, title, price, countBed, countSleep, rentalParking, countBath, furnished, petsConsidered } = this.props
 
         return (
 
             <div className="col-xs-6 col-sm-4">
                 <div className="property-card">
-                    <div className="home-title" style={{backgroundImage: `url(${this.state.src !== ''?this.state.src:'placeholder.jpg'})`}}>
+                    <div className="home-title"
+                         style={{backgroundImage: `url(${this.state.src !== '' ? this.state.src : 'placeholder.jpg'})`}}>
                         <h5>{address}</h5>
                         <h3>{title}</h3>
                     </div>
@@ -127,12 +133,21 @@ class PropertyCard extends React.Component {
                     </div>
                 </div>
             </div>
-
-
         )
     }
+}
 
-
+PropertyCard.protoTypes = {
+    id: propTypes.number,
+    address: propTypes.string,
+    title: propTypes.string,
+    price: propTypes.number,
+    countBed: propTypes.number,
+    countBath: propTypes.number,
+    countSleep: propTypes.boolean,
+    rentalParking: propTypes.boolean,
+    furnished: propTypes.boolean,
+    petsConsidered: propTypes.boolean,
 }
 
 

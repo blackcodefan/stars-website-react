@@ -11,7 +11,7 @@ class SolutionCard extends React.Component {
     }
 
     handleClick = (category) => {
-        history.push(`/property#${category}`)
+        history.push(`/property/?category=${category}`)
     }
 
     componentDidMount() {

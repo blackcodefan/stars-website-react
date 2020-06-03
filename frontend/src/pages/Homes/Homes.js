@@ -1,6 +1,6 @@
 import React from "react";
 
-import SearchBox from "../../components/sections/SearchBox";
+import SearchBox from "../../components/layout/SearchBox";
 import SolutionView from "../../components/sections/SolutionView";
 import HeaderNavbar from "../../components/layout/HeaderNavbar";
 import ExperienceView from "../../components/sections/ExperienceView";
