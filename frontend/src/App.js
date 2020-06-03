@@ -49,10 +49,7 @@ class App extends React.Component {
         )
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 }
 
 const mapStateToProps = state => {
