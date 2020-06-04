@@ -12,3 +12,7 @@
 * python manage.py migrate
 * python manage.py collectstatic
 * python manage.py runserver
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5a51fbdbfb21ba34f308e01405c18654793101b
