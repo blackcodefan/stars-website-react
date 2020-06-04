@@ -3,7 +3,7 @@
   <component name="FacetManager">
     <facet type="google-appengine-python" name="Google App Engine (Python)">
       <configuration>
-        <option name="rootFolder" value="D:\stars-website-react" />
+        <option name="rootFolder" value="E:\Projects\_freelancer\GCP\stars-website-react" />
         <option name="sdkFolder" value="C:\Users\myong\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin" />
         <option name="templatesFolder" value="" />
         <option name="oauth2" value="false" />
