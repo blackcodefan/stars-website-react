@@ -100,6 +100,35 @@ i {
   color: #CBCBCB;
 }
 
+.arrow {
+  border: solid $color-gray;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  top: 30%;
+}
+.arrow:hover {
+  border: solid $color-blue;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  position: absolute;
+  top: 30%;
+}
+
+.right {
+  right: -20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  left: -20px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
 /** ----------- BACKGROUNDS ----------- **/
 
 .main-background {
@@ -142,7 +171,7 @@ i {
 
 
 .grey-background {
-  background-color: #F8F8F8;
+  //background-color: #F8F8F8;
   background-color: #EEEEEE;
 }
 

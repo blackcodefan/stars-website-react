@@ -1,1 +1,0 @@
-{"version":3,"sources":["assets/images/icons/user.svg"],"names":["module","exports"],"mappings":"oGAAAA,EAAOC,QAAU,IAA0B","file":"static/js/14.0c3cf8e5.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/user.2aa64ca8.svg\";"],"sourceRoot":""}

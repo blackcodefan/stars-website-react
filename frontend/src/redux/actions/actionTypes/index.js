@@ -3,3 +3,4 @@ export * from './user.constants';
 export * from './property.constants';
 export * from './currentProperty.constants'
 export * from './booking.constants'
+export * from './location.constants'

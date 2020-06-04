@@ -1,5 +1,5 @@
 import { propertyConstants } from "./actionTypes/property.constants";
-import { properties, categories } from './_mockdb'
+import { properties, propertyCategories } from './_mockdb'
 
 
 export const propertyAction = {
@@ -20,21 +20,19 @@ function getAllProperties() {
 
 function getFilteredProperties(terms) {
     const { category } = terms
-    console.log("=====================terms=================", terms  )
     return {
-        type: propertyConstants.FETCH_FILTERED_PROPERTIES,
+        type: propertyConstants.GET_FILTERED_PROPERTIES,
         payload: {
             items: properties.filter((property) => (property.category === category)),
         }
     }
 }
 
-
 function getAllCatetories() {
     return {
-        type: propertyConstants.GET_ALL_CATEGORIES,
+        type: propertyConstants.GET_PROPERTY_CATEGORIES,
         payload: {
-            categories: categories
+            categories: propertyCategories
         }
     }
 }

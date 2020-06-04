@@ -1,23 +1,14 @@
-import {propertyConstants} from '../actions/actionTypes';
+import {locationConstants} from '../actions/actionTypes';
 
 
-export function property(state = {}, action) {
+export function location(state = {}, action) {
     switch (action.type) {
-        case propertyConstants.GET_ALL_PROPERTIES:
+        case locationConstants.GET_ALL_LOCATIONS:
             return {
                 ...state,
-                items: action.payload.items,
-            };
-        case propertyConstants.GET_FILTERED_PROPERTIES:
-            return {
-                ...state,
-                items: action.payload.items,
-            };
-        case propertyConstants.GET_PROPERTY_CATEGORIES:
-            return {
-                ...state,
-                categories: action.payload.categories,
+                items: action.payload.items
             }
+
         default:
             return state
     }

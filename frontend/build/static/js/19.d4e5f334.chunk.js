@@ -1,2 +1,0 @@
-(this.webpackJsonpstarsofboston=this.webpackJsonpstarsofboston||[]).push([[19],{604:function(s,o,t){s.exports=t.p+"static/media/boston-skyline.e8bbc13a.jpg"}}]);
-//# sourceMappingURL=19.d4e5f334.chunk.js.map

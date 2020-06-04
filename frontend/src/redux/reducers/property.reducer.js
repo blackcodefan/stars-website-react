@@ -8,12 +8,12 @@ export function property(state = {}, action) {
                 ...state,
                 items: action.payload.items,
             };
-        case propertyConstants.FETCH_FILTERED_PROPERTIES:
+        case propertyConstants.GET_FILTERED_PROPERTIES:
             return {
                 ...state,
                 items: action.payload.items,
             };
-        case propertyConstants.GET_ALL_CATEGORIES:
+        case propertyConstants.GET_PROPERTY_CATEGORIES:
             return {
                 ...state,
                 categories: action.payload.categories,

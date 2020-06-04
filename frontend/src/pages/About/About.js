@@ -30,11 +30,11 @@ class About extends React.Component {
                             <p>
                                 As a recognized leader in the industry, we offer the perfect hotel alternative.
                             </p>
-                            <button className="btn btn-block btn-outline-primary">CHECK OUT BOSTON</button>
+                            <button className="btn btn-outline-primary">CHECK OUT BOSTON</button>
                         </div>
 
-                        <div className="col-sm-6">
-                            <img src={ imgBoston } className="location-card-img"/>
+                        <div className="col-sm-6 image-box">
+                            <img src={ imgBoston } className="image-box"/>
                         </div>
                     </div>
                 </div>

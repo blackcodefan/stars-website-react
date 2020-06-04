@@ -1,2 +1,0 @@
-(this.webpackJsonpstarsofboston=this.webpackJsonpstarsofboston||[]).push([[3],{611:function(s,o,t){s.exports=t.p+"static/media/360-degrees-2.2f4b9317.svg"}}]);
-//# sourceMappingURL=3.39220db0.chunk.js.map

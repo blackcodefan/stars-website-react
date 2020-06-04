@@ -1,40 +1,28 @@
-import { propertyConstants } from "./actionTypes/property.constants";
-import { properties, categories } from './_mockdb'
+import { locationConstants } from './actionTypes/location.constants'
+import { locations } from "./_mockdb";
 
 
-export const propertyAction = {
-    getAllProperties,
-    getFilteredProperties,
-    getAllCatetories,
+export const locationAction = {
+    getAllLocations,
+    getLocationDetail,
 }
 
 
-function getAllProperties() {
+function getAllLocations() {
     return {
-        type: propertyConstants.GET_ALL_PROPERTIES,
+        type: locationConstants.GET_ALL_LOCATIONS,
         payload: {
-            items: properties,
+            items: locations,
         }
     }
 }
 
-function getFilteredProperties(terms) {
-    const { category } = terms
-    console.log("=====================terms=================", terms  )
+function getLocationDetail() {
     return {
-        type: propertyConstants.GET_FILTERED_PROPERTIES,
+        type: locationConstants.GET_LOCATION_DETAIL,
         payload: {
-            items: properties.filter((property) => (property.category === category)),
+
         }
     }
 }
 
-
-function getAllCatetories() {
-    return {
-        type: propertyConstants.GET_PROPERTY_CATEGORIES,
-        payload: {
-            categories: categories
-        }
-    }
-}

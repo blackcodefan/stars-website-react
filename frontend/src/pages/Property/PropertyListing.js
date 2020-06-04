@@ -21,7 +21,7 @@ class PropertyListing extends React.Component {
     }
 
     componentDidMount() {
-        console.log("componentWillMount")
+        console.log("componentDidMount")
         this.setState({loading: true})
         this.props.getAllProperties()
         this.props.getAllCategories()
@@ -30,7 +30,6 @@ class PropertyListing extends React.Component {
 
     componentWillReceiveProps(nextProps, nextContext) {
         console.log("============nextProps=========", nextProps)
-
         this.setState({properties: nextProps.property.items}, () => {
             console.log('this.state', this.state)
         });
@@ -143,8 +142,7 @@ class PropertyListing extends React.Component {
 
 
 const mapStateToProps = state => {
-    const {property} = state;
-    console.log("========property======", property)
+    const { property } = state;
     return {
         property
     }

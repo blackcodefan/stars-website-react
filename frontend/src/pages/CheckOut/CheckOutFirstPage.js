@@ -18,6 +18,7 @@ class CheckOutFirstPage extends React.Component {
                 cleaningFee: '',
                 serviceFee: '',
                 tax: '',
+                damageDeposit: ''
             },
             guest: {
                 firstName: '',
@@ -45,7 +46,56 @@ class CheckOutFirstPage extends React.Component {
     }
 
     handleContinue = () => {
+        console.log("========booking data=========", this.state)
+        if (this.state.booking.checkInDate === '' || this.state.booking.checkOutDate === '') {
+            alert('please insert date')
+            return false
+        }
+        if (this.state.booking.adultsCount === '' && this.state.booking.childrenCount === '') {
+            alert('please insert number of people')
+            return false
+        }
         history.push("/checkout-review")
+    }
+
+    handleCheckInChange = (value, formattedValue) => {
+        let booking = {...this.state.booking}
+        booking.checkInDate = value;
+        this.setState({booking})
+        if (this.state.booking.checkInDate < this.state.booking.checkOutDate) {
+            console.log("reset  checkout date")
+            booking.checkOutDate = ''
+            this.setState({booking})
+        }
+    }
+
+    handleCheckOutChange = (value, formattedValue) => {
+        let booking = {...this.state.booking}
+        booking.checkOutDate = value;
+        this.setState({booking})
+    }
+
+    handleAdultsCountChange = (e) => {
+        if (this.validateNumber(e.target.value)) {
+            let booking = {...this.state.booking}
+            booking.adultsCount = e.target.value;
+            this.setState({booking})
+        }
+    }
+
+    handleChildrenCountChange = (e) => {
+        if (this.validateNumber(e.target.value)) {
+            let booking = {...this.state.booking}
+            booking.childrenCount = e.target.value;
+            this.setState({booking})
+        }
+    }
+
+    validateNumber = (value) => {
+        const reg = /^[0-9\b]+$/;
+        if (value === '' || reg.test(value)) {
+            return true
+        }
     }
 
     render() {
@@ -144,62 +194,21 @@ class CheckOutFirstPage extends React.Component {
                                         </div>
 
                                         <div className="checkout-titles">
-                                            <h3 className="checkout-title">{ this.state.currentProperty.title }</h3>
-                                            <h5 className="checkout-subtitle">{ this.state.currentProperty.address}</h5>
+                                            <h3 className="checkout-title">{this.state.currentProperty.title}</h3>
+                                            <h5 className="checkout-subtitle">{this.state.currentProperty.address}</h5>
                                         </div>
 
                                         <div className="row checkout-boxes">
-                                            {/*<BookingForm*/}
-                                            {/*checkInDate={this.state.booking.checkInDate}*/}
-                                            {/*checkOutDate={this.state.booking.checkOutDate}*/}
-                                            {/*adultsCount={this.state.booking.adultsCount}*/}
-                                            {/*childrenCount={this.state.booking.childrenCount}*/}
-                                            {/*/>*/}
-                                            <div className='col-lg'>
-                                                <div className="input-group mb-3">
-                                                    <div className="input-group-prepend">
-                                                    <span className="input-group-text bg-white"><i
-                                                        className="fa fa-calendar"/></span>
-                                                    </div>
-                                                    <input type="text" className="form-control border-left-0"
-                                                           placeholder="Check In" aria-label="checkin"
-                                                           aria-describedby="check in"/>
-
-                                                </div>
-
-                                                <div className="input-group mb-3">
-                                                    <div className="input-group-prepend">
-                                                    <span className="input-group-text bg-white"><i
-                                                        className="fa fa-calendar"/></span>
-                                                    </div>
-                                                    <input type="text" className="form-control border-left-0"
-                                                           placeholder="Check Out" aria-label="checkout"
-                                                           aria-describedby="check out"/>
-
-                                                </div>
-                                            </div>
-
-                                            <div className='col-lg'>
-                                                <div className="input-group mb-3">
-                                                    <div className="input-group-prepend">
-                                                    <span className="input-group-text bg-white"><i
-                                                        className="fa fa-user"/></span>
-                                                    </div>
-                                                    <input type="text" className="form-control border-left-0"
-                                                           placeholder="Adults" aria-label="adults"
-                                                           aria-describedby="adults"/>
-                                                </div>
-
-                                                <div className="input-group mb-3">
-                                                    <div className="input-group-prepend">
-                                                    <span className="input-group-text bg-white"><i
-                                                        className="fa fa-user"/></span>
-                                                    </div>
-                                                    <input type="text" className="form-control border-left-0"
-                                                           placeholder="Children" aria-label="Children"
-                                                           aria-describedby="children"/>
-                                                </div>
-                                            </div>
+                                            <BookingForm
+                                                checkInDate={this.state.booking.checkInDate}
+                                                checkOutDate={this.state.booking.checkOutDate}
+                                                adultsCount={this.state.booking.adultsCount}
+                                                childrenCount={this.state.booking.childrenCount}
+                                                handleCheckInChange={this.handleCheckInChange}
+                                                handleCheckOutChange={this.handleCheckOutChange}
+                                                handleAdultsCountChange={this.handleAdultsCountChange}
+                                                handleChildrenCountChange={this.handleChildrenCountChange}
+                                            />
                                         </div>
 
                                         <div className="row checkout-boxes">

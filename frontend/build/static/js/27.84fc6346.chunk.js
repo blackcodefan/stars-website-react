@@ -1,2 +1,0 @@
-(this.webpackJsonpstarsofboston=this.webpackJsonpstarsofboston||[]).push([[27],{624:function(s,o,t){s.exports=t.p+"static/media/quincy-wollaston.c87ae674.jpg"}}]);
-//# sourceMappingURL=27.84fc6346.chunk.js.map

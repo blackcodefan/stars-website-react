@@ -2,15 +2,18 @@
 .location-card {
   display: flex;
   align-items: flex-start;
+  margin-top: 50px;
 }
 
-.location-card-img {
+.image-box img {
   display: block;
-  width: 90% !important;
   margin: 20px auto;
-  max-width: 100% !important;
   border-radius: 8px 8px 8px 8px;
   box-shadow: 0px 10px 1px #ddd, 0 10px 20px #ccc;
+  max-width:500px;
+  max-height:400px;
+  width: auto;
+  height: auto;
 }
 //.explore {
 //  width: 100% !important;

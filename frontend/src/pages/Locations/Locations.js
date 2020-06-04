@@ -19,7 +19,7 @@ class Locations extends React.Component {
                     title: '',
                     content: ''
                 }
-                ]
+            ]
         }
     }
 
@@ -75,8 +75,8 @@ class Locations extends React.Component {
                 <div className="container">
                     <div id="boston" className="row mb-5 location-card">
 
-                        <div className="col-sm-6">
-                            <img src={imgBoston} className="location-card-img" alt="boston"/>
+                        <div className="col-sm-6 image-box">
+                            <img src={imgBoston} className="pull-left" alt="boston"/>
                         </div>
                         <div className="col-sm-6">
                             <h3>Boston</h3>
@@ -108,14 +108,12 @@ class Locations extends React.Component {
                                 Frederick Law Olmsted. The Larz Anderson Auto Museum houses America's oldest car
                                 collection
                                 and features a variety of educational programs, exhibits and events throughout the year.
-                            </p>
-                            <p>
+
                                 Brookline is home to an eclectic mix of independent shops and boutiques, and also offers
                                 a
                                 variety of restaurants, cafes and bistros offering both unique and traditional flavors;
                                 casual dining and gourmet meals.
-                            </p>
-                            <p>
+
                                 Brookline's proximity to Boston, public transportation and major roadways means visitors
                                 have easy access to the hustle of downtown and a place to step away from all the action
                                 at
@@ -124,13 +122,13 @@ class Locations extends React.Component {
                             <button className="btn btn-outline-primary">CHECK OUT BROOKLINE</button>
 
                         </div>
-                        <div className="col-sm-6">
-                            <img src={imgBrookline} className="location-card-img"/>
+                        <div className="col-sm-6 image-box">
+                            <img src={imgBrookline} className="pull-right"/>
                         </div>
                     </div>
                     <div id="cambridge" className="row mb-5 location-card">
-                        <div className="col-sm-6">
-                            <img src={imgCambridge} className="location-card-img"/>
+                        <div className="col-sm-6 image-box">
+                            <img src={imgCambridge} className="pull-left"/>
                         </div>
                         <div className="col-sm-6">
                             <h3>Cambridge</h3>
@@ -141,8 +139,7 @@ class Locations extends React.Component {
                                 town, home of the two most prestigious universities in the nation, is an eclectic mix of
                                 cool shops, student hang outs and varied hip restaurants ready to please everyone's
                                 palate.
-                            </p>
-                            <p>
+
                                 If you want to travel, Stagecoach offers a network of frequent & reliable buses, these
                                 provide excellent access to all parts of Cambridge, as well as cycle hire and car hire
                                 shops
@@ -164,8 +161,7 @@ class Locations extends React.Component {
                                 Boston, rock climbing and hiking at the Blue Hills Reservation, world-class golf courses
                                 and
                                 so much more.
-                            </p>
-                            <p>
+
                                 Only seven miles from Boston’s Logan International Airport, Quincy is easily accessible
                                 by
                                 highway. It also has an excellent public transportation service with four MBTA Red Line
@@ -174,8 +170,8 @@ class Locations extends React.Component {
                             <button className="btn btn-outline-primary">CHECK OUT QUINCY</button>
 
                         </div>
-                        <div className="col-sm-6">
-                            <img src={imgQuincy} className="location-card-img"/>
+                        <div className="col-sm-6 image-box">
+                            <img src={imgQuincy} className="pull-right"/>
                         </div>
                     </div>
                 </div>

@@ -2,8 +2,6 @@ import React from "react";
 import {history} from "../../_helper/history"
 
 import HeaderNavbar from "../../components/layout/HeaderNavbar";
-import DatePickerInput from "../../components/elements/DatePickerInput";
-import DatePicker from "react-datepicker";
 
 import imgBedKing from "../../assets/images/icons/bed-king.svg"
 import imgBedQueen from "../../assets/images/icons/bed-queen.svg"
@@ -19,10 +17,10 @@ import {Spinner} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import PropertyCard from "../../components/sections/PropertyCard";
 import SimpleMap from "../../components/elements/SimpleMap";
+import BookingForm from "../../components/elements/BookingForm";
 
 
 library.add(faDoorOpen, faUserFriends, faParking, faBath, faCouch, faPaw)
-
 
 
 class PropertyDetail extends React.Component {
@@ -47,7 +45,8 @@ class PropertyDetail extends React.Component {
                 locations: [],
                 neighborhoods: {
                     restaurants: [],
-                    stores: []
+                    stores: [],
+                    transits: [],
                 },
                 similarAccommodations: [],
             },
@@ -113,7 +112,7 @@ class PropertyDetail extends React.Component {
     }
 
     handleBookClick = () => {
-        console.log(this.state)
+        console.log("========booking data=========", this.state)
         if (this.state.booking.checkInDate === '' || this.state.booking.checkOutDate === '') {
             alert('please insert date')
             return false
@@ -171,28 +170,28 @@ class PropertyDetail extends React.Component {
                             <div className="row align-items-center">
                                 <div className="col-sm">
                                     <div className="details-icons">
+                                            <span>
+                                                <FontAwesomeIcon icon="couch"/>
+                                                {
+                                                    currentProperty.furnished && "Furnished"
+                                                }
+                                            </span>
                                         <span>
-                                            <FontAwesomeIcon icon="couch"/>
-                                            {
-                                                currentProperty.furnished && "Furnished"
-                                            }
-                                        </span>
+                                                <FontAwesomeIcon icon="user-friends"/>
+                                                 Sleeps {currentProperty.countSleep}
+                                            </span>
                                         <span>
-                                            <FontAwesomeIcon icon="user-friends"/>
-                                             Sleeps {currentProperty.countSleep}
-                                        </span>
-                                        <span>
-                                            <FontAwesomeIcon icon="door-open"/>
+                                                <FontAwesomeIcon icon="door-open"/>
                                             {currentProperty.countBed} Bedroom
-                                        </span>
+                                            </span>
                                         <span>
-                                            <FontAwesomeIcon icon="bath"/>
+                                                <FontAwesomeIcon icon="bath"/>
                                             {currentProperty.countBath} Bathroom
-                                        </span>
+                                            </span>
                                         <span>
-                                            <FontAwesomeIcon icon="parking"/>
+                                                <FontAwesomeIcon icon="parking"/>
                                             {currentProperty.rentalParking && "Rental Parking"}
-                                        </span>
+                                            </span>
                                     </div>
 
                                     <ul className="nav nav-tabs details-buttons">
@@ -281,38 +280,32 @@ class PropertyDetail extends React.Component {
                                         </div>
 
                                         <div id="neighborhood" className="tab-pane fade">
-                                            <p>
-                                                <strong>BROOKLINE | ST MARY’S | COOLIDGE CORNER</strong><br/>
-                                                Walk to Coolidge Corner or Fenway and Kenmore&nbsp;and enjoy the
-                                                convenience of&nbsp;<a
-                                                href="https://www.wholefoodsmarket.com/stores/brookline?YYtxLB">Whole
-                                                Foods</a>,&nbsp;<a
-                                                href="https://www.regmovies.com/theaters/regal-fenway-stadium-13-rpx/C00168531252">Regal
-                                                Fenway Cinema</a>&nbsp;at the historical<a
-                                                href="https://samuelsre.com/property/landmark">&nbsp;Landmark
-                                                Center</a>&nbsp;as well as many great restaurants, bakeries and
-                                                shops at
-                                                your doorstep.</p>
-                                            <p><strong>RESTAURANTS</strong><br/>
-                                                Busy Bee Diner<br/>
-                                                Taberna de Haro<br/>
-                                                Sol Azteca<br/>
-                                                Dunkin Donuts<br/>
-                                                Tatte Bakery<br/>
-                                                Japonaise Bakery</p>
-                                            <p><strong>STORES</strong><br/>
-                                                <a href="https://stores.truevalue.com/ma/brookline/18681/">True
-                                                    Value
-                                                    Hardware</a><br/>
-                                                <a href="http://wholefoodsmarket.com/">Whole Foods</a><br/>
-                                                <a href="http://star%20market/">Star Market</a></p>
+                                            <p><strong>RESTAURANTS</strong><br/></p>
+                                            {
+                                                currentProperty.neighborhoods.restaurants.map((item, index) => (
+                                                        <><p>{item}</p></>
+                                                    )
+                                                )
+                                            }
+
+
+                                            <p><strong>STORES</strong><br/></p>
+                                            {
+                                                currentProperty.neighborhoods.stores.map((item, index) => (
+                                                        <><a href={item.link}>{item.name}</a></>
+                                                    )
+                                                )
+                                            }
+
                                         </div>
 
                                         <div id="transit" className="tab-pane fade">
-                                            <p className="text-left">Green Line C Train across from the building
-                                                Nearest T stop: St. Mary’s</p>
-                                            <p><a href="https://mbta.com/schedules/Green">Green Line details at MBTA
-                                                official website</a></p>
+                                             {
+                                                currentProperty.neighborhoods.transits.map((item, index) => (
+                                                    <><p>{item}</p></>
+                                                    )
+                                                )
+                                            }
                                         </div>
                                     </div>
                                 </div>
@@ -333,67 +326,16 @@ class PropertyDetail extends React.Component {
                                                     </button>
                                                 </div>
                                             </div>
-
-                                            <div className="row checkout-boxes">
-                                                <div className='col-xs-6 col-sm-6 col-lg-6'>
-                                                    <DatePicker
-                                                        selected={this.state.booking.checkInDate}
-                                                        value={this.state.booking.checkInDate}
-                                                        minDate={new Date()}
-                                                        className="form-control border-left-0"
-                                                        dateFormat="MM/dd/yyyy"
-                                                        placeholderText="CheckIn"
-                                                        customInput={<DatePickerInput/>}
-                                                        onChange={this.handleCheckInChange}/>
-                                                </div>
-                                                <div className='col-xs-6 col-sm-6 col-lg-6'>
-                                                    <DatePicker
-                                                        selected={this.state.booking.checkOutDate}
-                                                        value={this.state.booking.checkOutDate}
-                                                        minDate={this.state.booking.checkInDate === '' ? new Date() : this.state.booking.checkInDate}
-                                                        className="form-control border-left-0"
-                                                        dateFormat="MM/dd/yyyy"
-                                                        placeholderText="CheckOut"
-                                                        customInput={<DatePickerInput/>}
-                                                        onChange={this.handleCheckOutChange}/>
-                                                </div>
-                                            </div>
-                                            <div className="row checkout-boxes">
-                                                <div className='col-xs-6 col-sm-6 col-lg-6'>
-                                                    <div className="input-group mb-3  center-block">
-                                                        <div className="input-group-prepend">
-                                                            <span className="input-group-text bg-white"><i
-                                                                className="fa fa-user"/></span>
-                                                        </div>
-                                                        <input
-                                                            type="text"
-                                                            className="form-control border-left-0"
-                                                            placeholder="Adults"
-                                                            value={this.state.booking.adultsCount}
-                                                            onChange={this.handleAdultsCountChange}
-                                                            aria-label="adults"
-                                                            aria-describedby="adults"/>
-                                                    </div>
-                                                </div>
-
-                                                <div className='col-xs-6 col-sm-6 col-lg-6'>
-                                                    <div className="input-group mb-3">
-                                                        <div className="input-group-prepend">
-                                                            <span className="input-group-text bg-white"><i
-                                                                className="fa fa-user"/></span>
-                                                        </div>
-                                                        <input
-                                                            type="text"
-                                                            className="form-control border-left-0"
-                                                            placeholder="Children"
-                                                            value={this.state.booking.childrenCount}
-                                                            onChange={this.handleChildrenCountChange}
-                                                            aria-label="Children"
-                                                            aria-describedby="children"/>
-                                                    </div>
-                                                </div>
-
-                                            </div>
+                                            <BookingForm
+                                                checkInDate={this.state.booking.checkInDate}
+                                                checkOutDate={this.state.booking.checkOutDate}
+                                                adultsCount={this.state.booking.adultsCount}
+                                                childrenCount={this.state.booking.childrenCount}
+                                                handleCheckInChange={this.handleCheckInChange}
+                                                handleCheckOutChange={this.handleCheckOutChange}
+                                                handleAdultsCountChange={this.handleAdultsCountChange}
+                                                handleChildrenCountChange={this.handleChildrenCountChange}
+                                            />
                                             <div className="row checkout-boxes align-items-start">
                                                 <div className='col-sm'>
                                                     <ul>
@@ -453,7 +395,7 @@ class PropertyDetail extends React.Component {
 }
 
 const mapStateToProps = state => {
-    const {currentProperty} = state;
+    const { currentProperty } = state;
     return {
         currentProperty
     }
