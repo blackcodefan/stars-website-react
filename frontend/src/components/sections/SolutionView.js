@@ -40,7 +40,7 @@ class SolutionView extends React.Component {
 
     render() {
         return (
-            <section className="container-fluid overview-container">
+            <section className="container-fluid solution-container">
                 <div className="container">
                     <h2>Short-Term Apartment Rental Solutions</h2>
                     <p>STARS of Boston is your short-term apartment rental solution in the greater Boston area. We are

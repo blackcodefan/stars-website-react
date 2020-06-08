@@ -3,7 +3,7 @@ import {history} from "../../_helper/history"
 
 
 class SolutionCard extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             src: ''
@@ -35,7 +35,7 @@ class SolutionCard extends React.Component {
     render() {
         const {title, text, imgName, category} = this.props
         return (
-            <div className="overview-box col-xl">
+            <div className="solution-card col-xl">
 
                 <img src={this.state.src} alt={imgName}/>
 
@@ -43,13 +43,11 @@ class SolutionCard extends React.Component {
                     <h3>{title}</h3>
                     <p>{text}</p>
                 </div>
-                <div className="overview-button">
-                    <button
-                        type="button"
-                        className="btn btn-outline-primary text-left"
-                        onClick={() => this.handleClick(category)}>Explore
-                    </button>
-                </div>
+                <button
+                    type="button"
+                    className="btn btn-outline-primary text-left"
+                    onClick={() => this.handleClick(category)}>Explore
+                </button>
             </div>
         )
     }

@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.512789f3.chunk.css",
-    "main.js": "/static/js/main.171e9445.chunk.js",
-    "main.js.map": "/static/js/main.171e9445.chunk.js.map",
+    "main.css": "/static/css/main.839dd4f0.chunk.css",
+    "main.js": "/static/js/main.4a20497e.chunk.js",
+    "main.js.map": "/static/js/main.4a20497e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d4e6aa15.js",
     "runtime-main.js.map": "/static/js/runtime-main.d4e6aa15.js.map",
-    "static/css/2.98b2f80b.chunk.css": "/static/css/2.98b2f80b.chunk.css",
-    "static/js/2.97fc557e.chunk.js": "/static/js/2.97fc557e.chunk.js",
-    "static/js/2.97fc557e.chunk.js.map": "/static/js/2.97fc557e.chunk.js.map",
+    "static/css/2.31e7e4b9.chunk.css": "/static/css/2.31e7e4b9.chunk.css",
+    "static/js/2.10f5a1ab.chunk.js": "/static/js/2.10f5a1ab.chunk.js",
+    "static/js/2.10f5a1ab.chunk.js.map": "/static/js/2.10f5a1ab.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.66e10001bca34f4fca15d8bf421f98cb.js": "/precache-manifest.66e10001bca34f4fca15d8bf421f98cb.js",
+    "precache-manifest.442f7b24b99e93789ca45b57ec774c79.js": "/precache-manifest.442f7b24b99e93789ca45b57ec774c79.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.98b2f80b.chunk.css.map": "/static/css/2.98b2f80b.chunk.css.map",
-    "static/css/main.512789f3.chunk.css.map": "/static/css/main.512789f3.chunk.css.map",
-    "static/js/2.97fc557e.chunk.js.LICENSE.txt": "/static/js/2.97fc557e.chunk.js.LICENSE.txt",
+    "static/css/2.31e7e4b9.chunk.css.map": "/static/css/2.31e7e4b9.chunk.css.map",
+    "static/css/main.839dd4f0.chunk.css.map": "/static/css/main.839dd4f0.chunk.css.map",
+    "static/js/2.10f5a1ab.chunk.js.LICENSE.txt": "/static/js/2.10f5a1ab.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/static/media/subscribe-bg.ca067b06.jpg",
     "static/media/bed-king.svg": "/static/media/bed-king.259df7e7.svg",
     "static/media/bed-queen.svg": "/static/media/bed-queen.d17d7ff8.svg",
@@ -53,17 +53,19 @@
     "static/media/locations-quincy.jpg": "/static/media/locations-quincy.c87ae674.jpg",
     "static/media/logo-horizontal.png": "/static/media/logo-horizontal.33005d3b.png",
     "static/media/logo-white.png": "/static/media/logo-white.dd6af070.png",
+    "static/media/logo.svg": "/static/media/logo.e1440537.svg",
     "static/media/medical.jpg": "/static/media/medical.075c338d.jpg",
     "static/media/room1.jpg": "/static/media/room1.62b44154.jpg",
     "static/media/room2.jpg": "/static/media/room2.1db8bdac.jpg",
     "static/media/sofa.svg": "/static/media/sofa.4e17ee8c.svg",
+    "static/media/sygnet.svg": "/static/media/sygnet.dba7f081.svg",
     "static/media/user.svg": "/static/media/user.2aa64ca8.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d4e6aa15.js",
-    "static/css/2.98b2f80b.chunk.css",
-    "static/js/2.97fc557e.chunk.js",
-    "static/css/main.512789f3.chunk.css",
-    "static/js/main.171e9445.chunk.js"
+    "static/css/2.31e7e4b9.chunk.css",
+    "static/js/2.10f5a1ab.chunk.js",
+    "static/css/main.839dd4f0.chunk.css",
+    "static/js/main.4a20497e.chunk.js"
   ]
 }

@@ -13,15 +13,15 @@ class Footer extends React.Component {
         return (
             <footer className="container-fluid grey-background">
                 <div className="row align-items-start container">
-                    <div className="col-xl-3">
+                    <div className="col-md-3 col-xs-6">
                         <img src={logo} className="site-logo" alt="bottom-logo"/>
                         <p>Your short-term apartment rental solution in greater Boston.</p>
                     </div>
 
-                    <div className="col-xl-3">
+                    <div className="col-md-3 col-xs-6">
                         <h5>Quick Links</h5>
                         <div className="row align-items-start">
-                            <div className="col-xl-5">
+                            <div className="col-md">
                                 <ul>
                                     <li>
                                         <a href="">Services</a>
@@ -40,7 +40,7 @@ class Footer extends React.Component {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-xl">
+                            <div className="col-md">
                                 <ul>
                                     <li>
                                         <a href="">Contact us</a>
@@ -62,7 +62,7 @@ class Footer extends React.Component {
                         </div>
                     </div>
 
-                    <div className="col-xl">
+                    <div className="col-md col-xs-6">
                         <h5>Locations</h5>
                         <ul>
                             <li>
@@ -80,7 +80,7 @@ class Footer extends React.Component {
                         </ul>
                     </div>
 
-                    <div className="col-xl">
+                    <div className="col-md col-xs-6">
                         <h5>Explore</h5>
                         <ul>
                             <li>
@@ -98,7 +98,7 @@ class Footer extends React.Component {
                         </ul>
                     </div>
 
-                    <div className="col-xl">
+                    <div className="col-md col-xs-6">
                         <h5>Get in touch</h5>
                         <p className="social-icons">
                             <a href="#"><i className="fa fa-instagram"/></a>

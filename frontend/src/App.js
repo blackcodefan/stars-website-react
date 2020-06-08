@@ -6,7 +6,6 @@ import {history} from "./_helper/history"
 
 import Homes from "./pages/Homes/Homes";
 import About from "./pages/About/About";
-import Footer from "./components/layout/Footer";
 import PropertyListing from "./pages/Property/PropertyListing";
 import PropertyDetail from "./pages/Property/PropertyDetail";
 import connect from "react-redux/es/connect/connect";
@@ -16,8 +15,6 @@ import CheckOutFirstPage from "./pages/CheckOut/CheckOutFirstPage";
 import CheckOutSecondPage from "./pages/CheckOut/CheckOutSecondPage";
 import CheckOutThirdPage from "./pages/CheckOut/CheckOutThirdPage";
 import ComingSoon from "./pages/Others/ComingSoon";
-import PageNotFound from "./pages/Others/PageNotFound";
-import {Alert} from "react-bootstrap";
 
 
 class App extends React.Component {
@@ -25,7 +22,6 @@ class App extends React.Component {
     render() {
         return (
             <>
-
                 <BrowserRouter>
                     <Router history={history}>
                         <Switch>
@@ -41,12 +37,11 @@ class App extends React.Component {
                             <Route exact path="/about" component={About}/>
                             <Route exact path="/services" component={ComingSoon}/>
                             <Route exact path="/blog" component={ComingSoon}/>
-                            <Route exact pexact ath="/contact" component={ComingSoon}/>
-                            <Route path="*" component={PageNotFound}/>
+                            <Route exact path="/contact" component={ComingSoon}/>
                         </Switch>
                     </Router>
                 </BrowserRouter>
-                <Footer/>
+
             </>
         )
     }

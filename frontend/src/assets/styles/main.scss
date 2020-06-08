@@ -1,3 +1,6 @@
+/**
+ ** Guest panel
+  */
 @import "abstracts/variables";
 @import "abstracts/functions";
 @import "abstracts/mixins";
@@ -14,3 +17,18 @@
 @import "pages/locations";
 @import "pages/medical";
 
+///**
+//** Admin Panel
+// */
+//
+//@import "admin/variables";
+//@import "~@coreui/coreui-pro/scss/coreui.scss";
+//
+//// Temp fix for reactstrap
+////@import "~@coreui/coreui-pro/scss/_dropdown-menu-right.scss";
+//
+//@import "admin/custom";
+//@import "admin/ie-fix";
+//@import "admin/fixes";
+//$spinkit-spinner-color: $body-color;
+//@import '~spinkit/scss/spinkit.scss';

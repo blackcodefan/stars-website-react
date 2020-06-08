@@ -23,7 +23,7 @@ class SubscribeView extends React.Component {
                         <div className='col-md input-group' id='email'>
                             <input type='text' className="form-control" placeholder="Your Email Address"/>
                         </div>
-                        <div className="col-md">
+                        <div className="col-md text-center">
                             <button type="button" className="btn btn-outline-primary">Sign Up</button>
                         </div>
                     </div>

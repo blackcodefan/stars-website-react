@@ -73,8 +73,8 @@ class SearchBox extends React.Component {
                     Quick search your perfect accomodation
                 </h1>
                 <p>Short term furnished appartment rentals in Boston</p>
-                <div className="row align-items-start">
-                    <div className='col-xs-6 col-sm-4 col-lg-2'>
+                <div className="row container align-items-start">
+                    <div className='col-lg-2 col-sm-6 col-xs'>
                         <DatePicker
                             selected={this.state.checkInDate}
                             value={this.state.checkInDate}
@@ -86,7 +86,7 @@ class SearchBox extends React.Component {
                             onChange={this.handleCheckInChange}/>
                     </div>
 
-                    <div className='col-xs-6 col-sm-4 col-lg-2'>
+                    <div className='col-lg-2 col-sm-6 col-xs'>
                         <DatePicker
                             selected={this.state.checkOutDate}
                             value={this.state.checkOutDate}
@@ -98,7 +98,7 @@ class SearchBox extends React.Component {
                             onChange={this.handleCheckOutChange}/>
                     </div>
 
-                    <div className='col-xs-6 col-sm-4 col-lg-2'>
+                    <div className='col-lg-2 col-sm-6 col-xs'>
                         <div className="input-group mb-3">
                             <div className="input-group-prepend">
                                 <span className="input-group-text bg-white"><i className="fa fa-user"/></span>
@@ -114,7 +114,7 @@ class SearchBox extends React.Component {
                         </div>
                     </div>
 
-                    <div className='col-xs-6 col-sm-4 col-lg-2'>
+                    <div className='col-lg-2 col-sm-6 col-xs'>
                         <div className="input-group mb-3">
                             <div className="input-group-prepend">
                                 <span className="input-group-text bg-white"><i className="fa fa-user"/></span>
@@ -130,13 +130,13 @@ class SearchBox extends React.Component {
                         </div>
                     </div>
 
-                    <div className='col-xs-6 col-sm-4 col-lg-2 search-button'>
+                    <div className='col-lg-2 col-sm-6 col-xs mb-3'>
                         <button type="button" className="btn btn-block btn-outline-primary"
                                 onClick={this.handleBrowseButtonClick}>Browse all rentals
                         </button>
                     </div>
 
-                    <div className='col-xs-6 col-sm-4 col-lg-2 search-button'>
+                    <div className='col-lg-2 col-sm-6 col-xs'>
                         <button type="button" className="btn btn-block btn-outline-primary"
                                 onClick={this.handleSearchButtonClick}>Search
                         </button>

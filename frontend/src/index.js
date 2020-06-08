@@ -6,6 +6,9 @@ import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "bootstrap/dist/js/bootstrap.js";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "font-awesome/css/font-awesome.css"
+import 'react-app-polyfill/ie9'; // For IE 9-11 support
+import 'react-app-polyfill/stable';
+// import 'react-app-polyfill/ie11'; // For IE 11 support
 
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
