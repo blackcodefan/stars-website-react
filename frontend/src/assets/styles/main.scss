@@ -7,27 +7,18 @@
 @import "base/typography";
 @import "base/elements";
 @import "base/layout";
-@import "partials/header";
-@import "partials/footer";
-@import "pages/home";
-@import "pages/checkout";
-@import "pages/about";
-@import "pages/property-detail";
-@import "pages/property-listing";
-@import "pages/locations";
-@import "pages/medical";
+@import "custom/guest";
 
-///**
-//** Admin Panel
-// */
+
+/**
+** Admin Panel
+ */
 //
-//@import "admin/variables";
 //@import "~@coreui/coreui-pro/scss/coreui.scss";
 //
 //// Temp fix for reactstrap
 ////@import "~@coreui/coreui-pro/scss/_dropdown-menu-right.scss";
 //
-//@import "admin/custom";
 //@import "admin/ie-fix";
 //@import "admin/fixes";
 //$spinkit-spinner-color: $body-color;

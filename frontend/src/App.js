@@ -4,17 +4,17 @@ import React from "react";
 import {BrowserRouter, Router, Route, Switch} from "react-router-dom";
 import {history} from "./_helper/history"
 
-import Homes from "./pages/Homes/Homes";
-import About from "./pages/About/About";
-import PropertyListing from "./pages/Property/PropertyListing";
-import PropertyDetail from "./pages/Property/PropertyDetail";
+import Homes from "./Guest/pages/Homes/Homes";
+import About from "./Guest/pages/About/About";
+import PropertyListing from "./Guest/pages/Property/PropertyListing";
+import PropertyDetail from "./Guest/pages/Property/PropertyDetail";
 import connect from "react-redux/es/connect/connect";
-import Locations from "./pages/Locations/Locations";
-import Medical from "./pages/Medical-Corporate/Medical";
-import CheckOutFirstPage from "./pages/CheckOut/CheckOutFirstPage";
-import CheckOutSecondPage from "./pages/CheckOut/CheckOutSecondPage";
-import CheckOutThirdPage from "./pages/CheckOut/CheckOutThirdPage";
-import ComingSoon from "./pages/Others/ComingSoon";
+import Locations from "./Guest/pages/Locations/Locations";
+import Medical from "./Guest/pages/Medical-Corporate/Medical";
+import CheckOutFirstPage from "./Guest/pages/CheckOut/CheckOutFirstPage";
+import CheckOutSecondPage from "./Guest/pages/CheckOut/CheckOutSecondPage";
+import CheckOutThirdPage from "./Guest/pages/CheckOut/CheckOutThirdPage";
+import ComingSoon from "./Guest/pages/Others/ComingSoon";
 
 
 class App extends React.Component {
@@ -38,6 +38,7 @@ class App extends React.Component {
                             <Route exact path="/services" component={ComingSoon}/>
                             <Route exact path="/blog" component={ComingSoon}/>
                             <Route exact path="/contact" component={ComingSoon}/>
+                            <Route exact path="/contact" component={ComingSoon}/>
                         </Switch>
                     </Router>
                 </BrowserRouter>
@@ -45,7 +46,6 @@ class App extends React.Component {
             </>
         )
     }
-
 
 }
 
