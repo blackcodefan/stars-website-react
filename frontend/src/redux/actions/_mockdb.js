@@ -173,7 +173,7 @@ export const propertyDetail = {
             'Green Line details at MBTA official website'
         ]
     },
-    rate: 200,
+    dailyFee: 200,
     cleaningFee: 20,
     serviceFee: 50,
     damageDeposit: 50,

@@ -2,9 +2,10 @@ import React from 'react'
 import {history} from "../../../_helper/history";
 import HeaderNavbar from "../../components/layout/HeaderNavbar";
 import Footer from "../../components/layout/Footer";
+import {Link} from "react-router-dom";
 
 
-class CheckOutSecondPage extends React.Component {
+class CheckOutReview extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -27,7 +28,7 @@ class CheckOutSecondPage extends React.Component {
                         <div className="col-xl-7 checkout-booking-info">
                             <div className="row align-items-center">
                                 <div className="col-sm-9">
-                                    <h3>Review Rules & Policies</h3>
+                                    <h4>Review Rules & Policies</h4>
                                 </div>
                                 <div className="col-sm text-right">
                                     <h6>Step 2 of 3</h6>
@@ -72,7 +73,7 @@ class CheckOutSecondPage extends React.Component {
                                 </div>
                             </div>
 
-                            <p><a href="#"><b><u>Contact us</u></b></a> if you want more information about long-term
+                            <p><Link to="/contact">contact us</Link> if you want more information about long-term
                                 (+30
                                 days) reservations.</p>
 
@@ -187,7 +188,7 @@ class CheckOutSecondPage extends React.Component {
                                         </div>
 
                                         <div className="row text-center checkout-contact">
-                                            <p>For booking assistance please <u><a href="#">contact us</a></u></p>
+                                            <p>For booking assistance please <Link to="/contact">contact us</Link></p>
                                         </div>
 
 
@@ -207,4 +208,4 @@ class CheckOutSecondPage extends React.Component {
 
 }
 
-export default CheckOutSecondPage
+export default CheckOutReview

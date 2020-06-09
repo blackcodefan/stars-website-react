@@ -75,7 +75,7 @@ class HeaderNavbar extends React.Component {
                                 onSelect={this.handleNav}
                             >
                                 <Nav.Item>
-                                    <Nav.Link eventKey="Homes">Homes</Nav.Link>
+                                    <Nav.Link eventKey="Apartments">Apartments</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="Locations">Locations</Nav.Link>

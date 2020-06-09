@@ -19,13 +19,15 @@
 }
 
 .navbar {
-  background-color: transparent;
+  background-color: transparent !important;
   transition: all 0.5s ease-in-out;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 
   > .container {
     margin-bottom: 0 !important;
+    display: flex;
+    justify-content: space-between;
   }
 
   .navbar-brand img {
@@ -38,6 +40,11 @@
 
   .navbar-collapse {
     height: auto !important;
+    flex-grow: 0;
+
+    .nav-link {
+      margin: 0 1rem !important;
+    }
 
 
     @media (max-width: 991px) {
@@ -240,7 +247,7 @@
 
   &.sticky {
     top: 0;
-    background-color: #fff;
+    background-color: #fff !important;
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.14);
     padding: 15px 0;
 
@@ -260,7 +267,6 @@
   @media (min-width: 992px) {
     flex-wrap: nowrap;
     padding: 25px 0;
-    background: white;
 
     &.sticky {
       padding: 19px 0px 18px 0;
@@ -302,13 +308,18 @@ footer ul {
 
 .search-box {
   background: rgba(255, 255, 255, 0.85);
-  padding: 2rem;
+  padding: 2rem 2rem 1rem;
   border-radius: 8px;
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.16);
-  margin-top: 300px;
+  margin-top: 450px;
 
   h1 {
     margin: 0 0 0.5rem 0;
+  }
+
+  .search-box-column {
+    display: flex;
+    flex-direction: column;
   }
 
   .row .col-sm {
@@ -322,6 +333,10 @@ footer ul {
 
   .form-control {
     border-left: 1px solid #ced4da;
+  }
+
+  .btn-block {
+    margin-top: 0 !important;
   }
 
 
@@ -364,7 +379,7 @@ footer ul {
 
 
 .solution-container {
-  margin-top: 100px;
+  margin-top: 150px;
   padding-top: 0;
 
   h1 {
@@ -381,8 +396,9 @@ footer ul {
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .15);
   min-height: 550px;
 
-  h3 {
+  h4 {
     margin-top: 0;
+    color: $color-blue;
   }
 
   img {
@@ -394,9 +410,8 @@ footer ul {
 
   button {
     position: absolute;
-    bottom: 50px;
-    transform: translateX(-50%);
-    left: 50%;
+    bottom: 40px;
+    right: 2rem;
   }
 
   .btn {
@@ -410,6 +425,7 @@ footer ul {
 
   p {
     padding: 0;
+    font-size: .9rem;
   }
 }
 
@@ -435,7 +451,6 @@ footer ul {
 
 .stars-item {
   text-align: center;
-  max-width: 350px;
   padding: 2rem;
 
   h4 {
@@ -450,10 +465,9 @@ footer ul {
 }
 
 
-.vip-services h3 {
+.vip-services h3, h4 {
   color: #3A3A3A;
   font-weight: bold;
-  font-size: 1.5rem;
 }
 
 .vip-item {
@@ -503,22 +517,15 @@ footer ul {
 
 .location {
   margin: 1rem auto;
-  padding: 0 1rem;
+  padding: 1rem;
   min-height: 250px;
   max-width: 350px;
   border-radius: 8px;
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.16);
 }
 
-.location img {
+.location:hover {
   opacity: .7;
-  width: 100%;
-  height: 150px;
-  margin-top: 15px;
-}
-
-.location img:hover {
-  opacity: 1;
   cursor: pointer;
 }
 
@@ -527,9 +534,14 @@ footer ul {
   border-radius: 8px;
   text-align: center;
 
-  h3 {
+  h4 {
     vertical-align: middle;
     padding: 1rem;
+    color: $color-blue;
+  }
+
+  a {
+    text-decoration: none;
   }
 
 }
@@ -567,13 +579,17 @@ footer ul {
     max-width: 100%;
     border-radius: 8px 8px 0 0;
     margin: 0;
-    padding-bottom: 60%;
+    padding-bottom: 65%;
   }
 
   svg {
     font-size: 1rem;
     color: #cbcbcb;
     margin-right: 2px;
+  }
+
+  p {
+    display: inline-block;
   }
 }
 
@@ -597,7 +613,7 @@ footer ul {
     color: white !important;
   }
 
-  h3 {
+  h4 {
     font-weight: bold;
     margin: 0;
     color: white !important;
@@ -640,11 +656,11 @@ footer ul {
 .features-property {
   .features-property-column {
     margin: 0;
-    padding: 1rem;
+    padding: .75rem;
   }
 
   ul li {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin: 1rem 0;
 
     i {
@@ -668,7 +684,7 @@ footer ul {
 
   p {
     margin: 0;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -790,6 +806,14 @@ footer ul {
   display: flex;
   align-items: flex-start;
   margin-top: 50px;
+  h4 {
+    color: $color-blue;
+  }
+}
+
+.location-button {
+  display: flex;
+  justify-content: center;
 }
 
 .image-box img {
@@ -880,7 +904,7 @@ ul.nav {
 }
 
 .propertyfilterparent {
-  margin: 50px auto 0;
+  margin: 100px auto 0;
   padding: 0;
   border-bottom: 2px solid $color-yellow !important;
 }
@@ -1037,6 +1061,15 @@ ul.nav {
   background: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.16);
+
+  h3 {
+    color: $color-yellow;
+    display: inline-block;
+  }
+
+  span {
+    color: $color-gray;
+  }
 }
 
 .booking-images {
@@ -1199,10 +1232,40 @@ ul.nav {
 }
 
 
-/** ABOUT **/
+/** Terms Privacy Refund **/
 
-.social-icons-contact i {
-  color: #E8C36A;
-  font-size: 1.5rem;
-  margin-right: 1rem;
+.main-text h4 {
+  color: $color-blue !important;
 }
+
+/** ABOUT **/
+.team-avatar {
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+}
+
+.social-icons-contact svg {
+  color: $color-yellow;
+  font-size: 1.75rem !important;
+  margin: 0 .5rem;
+}
+
+.contact-form {
+  margin-top: 3rem;
+  width: 100%;
+
+  .input-group {
+    padding: 0;
+  }
+
+  input:focus, textarea:focus {
+    border: 3px solid $color-yellow !important;
+    box-shadow: none !important;
+  }
+
+  input:active, textarea:active {
+    border: 3px solid $color-yellow !important;
+  }
+}
+

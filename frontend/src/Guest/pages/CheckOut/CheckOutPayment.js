@@ -1,9 +1,10 @@
 import React from 'react'
 import HeaderNavbar from "../../components/layout/HeaderNavbar";
 import Footer from "../../components/layout/Footer";
+import {Link} from "react-router-dom";
 
 
-class CheckOutThirdPage extends React.Component {
+class CheckOutPayment extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -24,7 +25,7 @@ class CheckOutThirdPage extends React.Component {
                         <div className="col-xl-7 checkout-booking-info">
                             <div className="row align-items-center">
                                 <div className="col-sm-9">
-                                    <h3>Payment Information</h3>
+                                    <h4>Payment Information</h4>
                                 </div>
                                 <div className="col-sm text-right">
                                     <h6>Step 3 of 3</h6>
@@ -34,10 +35,10 @@ class CheckOutThirdPage extends React.Component {
                             <h5>Payment Method</h5>
                             <ul>
                                 <div className="checkmark">
-                                    <label><input type="radio" name="paypal" checked/> Paypal</label>
+                                    <label><input type="radio" name="paymentMethod" value="paypal" checked/> Paypal</label>
                                 </div>
                                 <div className="checkmark">
-                                    <label><input type="radio" name="creditcard"/> Credit Card</label>
+                                    <label><input type="radio" name="paymentMethod" value="creditcard"/> Credit Card</label>
                                 </div>
                             </ul>
 
@@ -89,12 +90,12 @@ class CheckOutThirdPage extends React.Component {
                                     <div className="col-sm-5 text-center">
                                         <button type="button" className="btn btn-outline-primary">Book now</button>
                                         <div className="small-checkout-link">
-                                            <a href="#"><u>View Cancellation Policy</u></a>
+                                            <Link to="/cancellation-policy">View Cancellation Policy</Link>
                                         </div>
                                     </div>
                                 </div>
 
-                                <p><a href="#"><b><u>Contact us</u></b></a> if you want more information about long-term
+                                <p><Link to="/contact">contact us</Link> if you want more information about long-term
                                     (+30 days) reservations.</p>
                             </form>
 
@@ -209,7 +210,7 @@ class CheckOutThirdPage extends React.Component {
                                         </div>
 
                                         <div className="row text-center checkout-contact">
-                                            <p>For booking assistance please <u><a href="#">contact us</a></u></p>
+                                            <p>For booking assistance please <Link to="/contact">contact us</Link></p>
                                         </div>
 
                                     </div>
@@ -226,4 +227,4 @@ class CheckOutThirdPage extends React.Component {
 
 }
 
-export default CheckOutThirdPage
+export default CheckOutPayment

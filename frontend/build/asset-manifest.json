@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "./static/css/main.c5bb4588.chunk.css",
-    "main.js": "./static/js/main.e9f20358.chunk.js",
-    "main.js.map": "./static/js/main.e9f20358.chunk.js.map",
+    "main.css": "./static/css/main.1aa3f666.chunk.css",
+    "main.js": "./static/js/main.ed3763dc.chunk.js",
+    "main.js.map": "./static/js/main.ed3763dc.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.99015c13.js",
     "runtime-main.js.map": "./static/js/runtime-main.99015c13.js.map",
-    "static/css/2.8efb4be7.chunk.css": "./static/css/2.8efb4be7.chunk.css",
-    "static/js/2.a222ea6f.chunk.js": "./static/js/2.a222ea6f.chunk.js",
-    "static/js/2.a222ea6f.chunk.js.map": "./static/js/2.a222ea6f.chunk.js.map",
+    "static/css/2.0ebf9c50.chunk.css": "./static/css/2.0ebf9c50.chunk.css",
+    "static/js/2.7fdd53a5.chunk.js": "./static/js/2.7fdd53a5.chunk.js",
+    "static/js/2.7fdd53a5.chunk.js.map": "./static/js/2.7fdd53a5.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.166354140ca7d9e381d24a378116b5a6.js": "./precache-manifest.166354140ca7d9e381d24a378116b5a6.js",
+    "precache-manifest.81714cf69d0903e0a51917713dabede9.js": "./precache-manifest.81714cf69d0903e0a51917713dabede9.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/2.8efb4be7.chunk.css.map": "./static/css/2.8efb4be7.chunk.css.map",
-    "static/css/main.c5bb4588.chunk.css.map": "./static/css/main.c5bb4588.chunk.css.map",
-    "static/js/2.a222ea6f.chunk.js.LICENSE.txt": "./static/js/2.a222ea6f.chunk.js.LICENSE.txt",
+    "static/css/2.0ebf9c50.chunk.css.map": "./static/css/2.0ebf9c50.chunk.css.map",
+    "static/css/main.1aa3f666.chunk.css.map": "./static/css/main.1aa3f666.chunk.css.map",
+    "static/js/2.7fdd53a5.chunk.js.LICENSE.txt": "./static/js/2.7fdd53a5.chunk.js.LICENSE.txt",
     "static/media/main.scss": "./static/media/subscribe-bg.ca067b06.jpg",
+    "static/media/avatar1.jpg": "./static/media/avatar1.3122abf4.jpg",
+    "static/media/avatar3.jpg": "./static/media/avatar3.73476783.jpg",
+    "static/media/avatar4.jpg": "./static/media/avatar4.8880a65c.jpg",
     "static/media/bed-king.svg": "./static/media/bed-king.259df7e7.svg",
     "static/media/bed-queen.svg": "./static/media/bed-queen.d17d7ff8.svg",
     "static/media/boston-about.jpg": "./static/media/boston-about.4dedd0f8.jpg",
@@ -67,9 +70,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.99015c13.js",
-    "static/css/2.8efb4be7.chunk.css",
-    "static/js/2.a222ea6f.chunk.js",
-    "static/css/main.c5bb4588.chunk.css",
-    "static/js/main.e9f20358.chunk.js"
+    "static/css/2.0ebf9c50.chunk.css",
+    "static/js/2.7fdd53a5.chunk.js",
+    "static/css/main.1aa3f666.chunk.css",
+    "static/js/main.ed3763dc.chunk.js"
   ]
 }

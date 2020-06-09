@@ -40,7 +40,7 @@ class SolutionCard extends React.Component {
                 <img src={this.state.src} alt={imgName}/>
 
                 <div className="overview-text">
-                    <h3>{title}</h3>
+                    <h4>{title}</h4>
                     <p>{text}</p>
                 </div>
                 <button

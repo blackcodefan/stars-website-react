@@ -2,9 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
-
 
 * {
   font-family: 'Raleway', sans-serif;
@@ -19,31 +18,35 @@ h1, h2, h3, h4, h5 {
   font-family: 'PT Serif';
   color: $color-blue;
   font-weight: 500;
-
 }
 
 h1, h2 {
   font-size: 2.4rem;
+  margin: 1.5rem 0 1.5rem 0;
 }
 
 h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
   font-size: 1.3rem;
   font-weight: normal;
   color: #0071AA;
   margin: 1rem 0;
 }
 
-h4 {
-  font-size: 1.8rem;
-}
-
 h5 {
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 h6 {
   font-size: 0.8rem;
+}
+
+p {
+  font-size: .9rem;
 }
 
 .text-center {

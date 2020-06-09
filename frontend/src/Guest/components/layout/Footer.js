@@ -1,5 +1,6 @@
 import React from "react";
 import logo from '../../../assets/images/logo-horizontal.png'
+import {Link} from "react-router-dom";
 
 
 class Footer extends React.Component {
@@ -24,38 +25,38 @@ class Footer extends React.Component {
                             <div className="col-md">
                                 <ul>
                                     <li>
-                                        <a href="">Services</a>
+                                        <Link to="/services">Services</Link>
                                     </li>
                                     <li>
-                                        <a href="">About us</a>
+                                        <Link to="/about">About us</Link>
                                     </li>
                                     <li>
-                                        <a href="">Medical Travel</a>
+                                        <Link to="/medical">Medical Travel</Link>
                                     </li>
                                     <li>
-                                        <a href="">Business Travel</a>
+                                        <Link to="/medical">Business Travel</Link>
                                     </li>
                                     <li>
-                                        <a href="">FAQs</a>
+                                        <Link to="">FAQs</Link>
                                     </li>
                                 </ul>
                             </div>
                             <div className="col-md">
                                 <ul>
                                     <li>
-                                        <a href="">Contact us</a>
+                                        <Link to="/contact">Contact us</Link>
                                     </li>
                                     <li>
-                                        <a href="">Blog</a>
+                                        <Link to="/blog">Blog</Link>
                                     </li>
                                     <li>
-                                        <a href="">Terms & Conditions</a>
+                                        <Link to="/terms-and-conditions">Terms & Conditions</Link>
                                     </li>
                                     <li>
-                                        <a href="">Privacy Policy</a>
+                                        <Link to="/privacy-policy">Privacy Policy</Link>
                                     </li>
                                     <li>
-                                        <a href="">Refund Policy</a>
+                                        <Link to="/cancellation-policy">Refund Policy</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -121,7 +122,7 @@ class Footer extends React.Component {
 
                 </div>
                 <div className="container">
-                    <h6 className="text-left">© 2019 Stars of Boston LLC. All rights reserved.</h6>
+                    <h6 className="text-left">© 2019-2020 Stars of Boston LLC. All rights reserved.</h6>
                 </div>
             </footer>
         )

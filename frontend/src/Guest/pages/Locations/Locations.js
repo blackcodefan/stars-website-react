@@ -34,45 +34,44 @@ class Locations extends React.Component {
         return (
             <>
                 <header>
-                    <section className="container-fluid main-background">
+                    <section className="container-fluid main-background-2">
                         <HeaderNavbar/>
                     </section>
                 </header>
 
-                <Container>
+                <div className="container ">
                     <h2 className="text-center">Our Locations</h2>
-                    <Row>
-                        <Col sm={6} md={3}>
+                    <div className="row">
+                        <div className="col-sm-6 col-md-3 location-button">
                             <a href="#boston">
                                 <button className="btn btn-outline-primary">
                                     Boston
                                 </button>
                             </a>
-
-                        </Col>
-                        <Col sm={6} md={3} className="center-block">
+                        </div>
+                        <div className="col-sm-6 col-md-3 location-button">
                             <a href="#brookline">
                                 <button className="btn btn-outline-primary">
                                     Brookline
                                 </button>
                             </a>
-                        </Col>
-                        <Col sm={6} md={3}>
+                        </div>
+                        <div className="col-sm-6 col-md-3 location-button">
                             <a href="#cambridge">
                                 <button className="btn btn-outline-primary">
                                     Cambridge
                                 </button>
                             </a>
-                        </Col>
-                        <Col sm={6} md={3}>
+                        </div>
+                        <div className="col-sm-6 col-md-3 location-button">
                             <a href="#quincy">
                                 <button className="btn btn-outline-primary">
                                     Quincy
                                 </button>
                             </a>
-                        </Col>
-                    </Row>
-                </Container>
+                        </div>
+                    </div>
+                </div>
                 <div className="container">
                     <div id="boston" className="row mb-5 location-card">
 
@@ -80,7 +79,7 @@ class Locations extends React.Component {
                             <img src={imgBoston} className="pull-left" alt="boston"/>
                         </div>
                         <div className="col-sm-6">
-                            <h3>Boston</h3>
+                            <h4>Boston</h4>
                             <p>
                                 Boston is the epitome of the historical and the contemporary. Personal preferences for
                                 entertainment and interests are virtually endless: from historical trails and artifacts
@@ -102,7 +101,7 @@ class Locations extends React.Component {
                     </div>
                     <div id="brookline" className="row mb-5 location-card">
                         <div className="col-sm-6">
-                            <h3>Brookline</h3>
+                            <h4>Brookline</h4>
                             <p>
                                 Brookline is home to two National Park Sites including the JFK Birthplace and the of
                                 home of
@@ -132,7 +131,7 @@ class Locations extends React.Component {
                             <img src={imgCambridge} className="pull-left"/>
                         </div>
                         <div className="col-sm-6">
-                            <h3>Cambridge</h3>
+                            <h4>Cambridge</h4>
                             <p>
                                 Whether you’re looking to indulge in an authentic meal, to pick up an antique bike, kick
                                 back in a bookstore or sip a coffee in an outdoor café, Cambridge delivers. This New
@@ -151,7 +150,7 @@ class Locations extends React.Component {
                     </div>
                     <div id="quincy" className="row mb-5 location-card">
                         <div className="col-sm-6">
-                            <h3>Quincy</h3>
+                            <h4>Quincy</h4>
                             <p>
                                 Just minutes from downtown Boston via the MBTA, boat or car, the City of Quincy is truly
                                 the

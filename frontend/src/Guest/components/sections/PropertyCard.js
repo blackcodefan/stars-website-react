@@ -67,7 +67,7 @@ class PropertyCard extends React.Component {
                          style={{backgroundImage: `url(${this.state.src !== '' ? this.state.src : 'placeholder.jpg'})`}}>
                         <div className="property-card-title">
                             <h5>{address}</h5>
-                            <h3>{title}</h3>
+                            <h4>{title}</h4>
                         </div>
                     </div>
 
@@ -75,20 +75,13 @@ class PropertyCard extends React.Component {
                         <div className="features-property-column">
                             <ul>
                                 <li>
+                                    <FontAwesomeIcon icon="door-open"/> {countBed} Bedroom
                                 </li>
                                 <li>
-                                    <FontAwesomeIcon icon="door-open"/>
-                                    {countBed} Bedroom
+                                    <FontAwesomeIcon icon="user-friends"/> Sleeps {countSleep}
                                 </li>
                                 <li>
-                                    <FontAwesomeIcon icon="user-friends"/>
-                                    Sleeps {countSleep}
-                                </li>
-                                <li>
-                                    <FontAwesomeIcon icon="parking"/>
-                                    {
-                                        rentalParking && "Rental Parking"
-                                    }
+                                    <FontAwesomeIcon icon="parking"/> {rentalParking && "Rental Parking"}
                                 </li>
                             </ul>
                         </div>
@@ -96,26 +89,19 @@ class PropertyCard extends React.Component {
                         <div className="features-property-column">
                             <ul>
                                 <li>
-                                    <FontAwesomeIcon icon="bath"/>
-                                    {countBath} Bathroom
+                                    <FontAwesomeIcon icon="bath"/> {countBath} Bathroom
                                 </li>
                                 <li>
-                                    <FontAwesomeIcon icon="couch"/>
-                                    {
-                                        furnished && "Furnished"
-                                    }
+                                    <FontAwesomeIcon icon="couch"/> {furnished && "Furnished"}
                                 </li>
                                 <li>
-                                    <FontAwesomeIcon icon="paw"/>
-                                    {
-                                        petsConsidered && "Pets considered"
-                                    }
+                                    <FontAwesomeIcon icon="paw"/> {petsConsidered && "Pets considered"}
                                 </li>
                             </ul>
                         </div>
 
                         <div className="features-property-column price-property">
-                            <h4>{price} $</h4>
+                            <h4>$ {price}</h4>
                             <p>per night</p>
                         </div>
                     </div>

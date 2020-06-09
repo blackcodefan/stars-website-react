@@ -17,7 +17,7 @@ class BookingForm extends React.Component {
                             minDate={new Date()}
                             className="form-control border-left-0"
                             dateFormat="MM/dd/yyyy"
-                            placeholderText="CheckIn"
+                            placeholderText="Check In"
                             customInput={<DatePickerInput/>}
                             onChange={handleCheckInChange}/>
                     </div>
@@ -28,7 +28,7 @@ class BookingForm extends React.Component {
                             minDate={checkInDate === '' ? new Date() : checkInDate}
                             className="form-control border-left-0"
                             dateFormat="MM/dd/yyyy"
-                            placeholderText="CheckOut"
+                            placeholderText="Check Out"
                             customInput={<DatePickerInput/>}
                             onChange={handleCheckOutChange}/>
                     </div>

@@ -108,6 +108,7 @@ i {
   position: absolute;
   top: 30%;
 }
+
 .arrow:hover {
   border: solid $color-blue;
   border-width: 0 3px 3px 0;
@@ -132,23 +133,24 @@ i {
 /** ----------- BACKGROUNDS ----------- **/
 
 .main-background {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3), transparent), url(../../images/starsofboston.jpg) no-repeat center;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3), transparent), url(../../images/couch-background.jpg) no-repeat center;
   background-size: cover;
   padding: 3rem 3rem 1rem 3rem;
-  height: 500px;
+  height: 650px;
   position: relative;
 
 }
 
 .main-background-property {
   background-size: cover;
-  height: 500px;
+  height: 600px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../../images/stayinboston.jpg) no-repeat center;
 }
 
 .main-background-2 {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4)), url(../../images/boston-2.jpg) no-repeat center;
   background-size: cover;
+  height: 650px;
 }
 
 .main-background-3 {
@@ -177,22 +179,22 @@ i {
 
 .blue-background {
   background-color: #3B87AE;
-}
 
-.blue-background p {
-  color: white;
-}
+  p {
+    color: white;
+  }
 
-.blue-background h2 {
-  color: white;
-}
+  h2 {
+    color: white;
+  }
 
-.blue-background .btn {
-  color: white;
-}
+  .btn {
+    color: white;
+  }
 
-.blue-background .btn:hover {
-  color: black;
+  .btn:hover {
+    color: $color-blue;
+  }
 }
 
 .stars-background {

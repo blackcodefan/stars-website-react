@@ -213,7 +213,7 @@ class PropertyDetail extends React.Component {
                                             <p>{currentProperty.overview}</p>
                                         </div>
                                         <div id="amenity" className="tab-pane fade">
-                                            <h3>Amenities</h3>
+                                            <h4>Amenities</h4>
                                             <h5>General</h5>
                                             <div className="row container align-items-center property-details">
                                                 <div className="col-md">
@@ -275,7 +275,7 @@ class PropertyDetail extends React.Component {
                                         </div>
 
                                         <div id="location" className="tab-pane fade">
-                                            <h3>Location</h3>
+                                            <h4>Location</h4>
                                             <SimpleMap/>
                                         </div>
 
@@ -311,18 +311,18 @@ class PropertyDetail extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md checkout-property-info">
+                        <div className="col-md">
                             <div className="row text-right">
                                 <div className="checkout-box col-xl">
                                     <div className="booking-information text-left">
                                         <div className="container align-items-center check-form">
                                             <div className="row container align-items-center check-form">
                                                 <div className="col-md">
-                                                    <h3>{currentProperty.price} $ <span>per night</span></h3>
+                                                        <h3>$ {currentProperty.price}</h3><span>   per night</span>
                                                 </div>
                                                 <div className="col-md takealook-button">
-                                                    <button type="button" className=" btn btn-outline-secondary"><i
-                                                        className="fas fa-external-link-alt"/> Share
+                                                    <button type="button" className=" btn btn-outline-secondary">
+                                                        <i className="fa fa-external-link"/> Share
                                                     </button>
                                                 </div>
                                             </div>

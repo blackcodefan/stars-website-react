@@ -102,9 +102,6 @@ class PropertyListing extends React.Component {
                             ))
                         }
                     </div>
-                </section>
-                <section className="container-fluid">
-
                     <div className="row container property-list-tab-title">
                         <div className="col-md ">
                             <h2>{this.state.activeCategory.charAt(0).toUpperCase() + this.state.activeCategory.slice(1)}</h2>
@@ -131,7 +128,6 @@ class PropertyListing extends React.Component {
                             ))
                         }
                     </div>
-
                 </section>
                 <Footer/>
             </>
