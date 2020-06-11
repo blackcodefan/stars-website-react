@@ -8,18 +8,41 @@ import SubscribeView from "../../components/sections/SubscribeView";
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faInstagram, faTwitter, faFacebookSquare} from '@fortawesome/free-brands-svg-icons'
+import $ from "jquery";
 
 library.add(faInstagram, faTwitter, faFacebookSquare);
 
 
-class About extends React.Component {
+class ContactUs extends React.Component {
+    constructor(props) {
+        super(props)
+        this.container = React.createRef()   // Create a ref object
+    }
+
+    // componentDidMount() {
+    //     window.scrollTo(0, 0);
+    // }
+
+    componentDidMount = () => this.handleScroll()
+
+    componentDidUpdate = () => this.handleScroll()
+
+    handleScroll = () => {
+        const {index, selected} = this.props
+        if (index === selected) {
+            setTimeout(() => {
+                this.container.current.scrollIntoView({behavior: 'smooth'})
+            }, 500)
+        }
+    }
+
     render() {
         return (
-            <header>
+            <div ref={this.container}>
                 <section className="container-fluid main-background-2">
                     <HeaderNavbar/>
                 </section>
-                <div className="container mt-lg-5 mb-lg-5 main-text">
+                <div className="container mt-lg-5 mb-lg-5 main-content">
                     <div className="row">
                         <div className="col-sm-6">
                             <h2>Contact us</h2>
@@ -47,11 +70,11 @@ class About extends React.Component {
                 </div>
                 <SubscribeView/>
                 <Footer/>
-            </header>
+            </div>
         )
     }
 
 
 }
 
-export default About
+export default ContactUs

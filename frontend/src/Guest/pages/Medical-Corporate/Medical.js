@@ -128,8 +128,12 @@ class Medical extends React.Component {
                         </div>
 
                     </div>
-                    <h2>Congenial Business Accommodations</h2>
-                    <div className="row align-items-start">
+
+                    <div className="row align-items-start mt-lg-5">
+                        <div className="col-sm-12">
+                            <h2>Congenial Business Accommodations</h2><br/>
+                        </div>
+
                         <div className="stars-item col-sm-6 col-md-4">
                             <img className="stars-icon" src={icon_workspace} alt="icon"/>
                             <h4>DEDICATED WORKSPACES</h4>

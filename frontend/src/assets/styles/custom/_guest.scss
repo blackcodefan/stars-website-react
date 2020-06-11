@@ -41,11 +41,13 @@
   .navbar-collapse {
     height: auto !important;
     flex-grow: 0;
+
     .white-nav-link {
-      color: white!important;
+      color: white !important;
     }
+
     .white-nav-link:after {
-      background-color: white!important;
+      background-color: white !important;
     }
 
 
@@ -295,24 +297,31 @@
 /**
 **  Footer
  */
-footer i {
-  color: #3A3A3A;
-  font-size: 0.9rem;
-  margin: 1rem 1.5rem 1rem 0;
+footer {
+  font-size: .9rem;
+
+  div.col-md:nth-child(2) {
+    padding: 0 !important;
+  }
+
+  i {
+    color: #3A3A3A;
+    font-size: 0.9rem;
+    margin: 1rem 1.5rem 1rem 0;
+  }
+
+  i:hover {
+    color: #949494;
+  }
+
+  ul {
+    margin: 1rem 0;
+  }
 }
 
-footer i:hover {
-  color: #949494;
-}
-
-footer ul {
-  margin: 1rem 0;
-}
-
-/**
-*    SEARCH BOX
- */
-
+  /**
+  *    SEARCH BOX
+   */
 .search-box {
   background: rgba(255, 255, 255, 0.85);
   padding: 2rem 2rem 1rem;
@@ -468,12 +477,16 @@ footer ul {
 
     margin: 1.5rem 0 1rem 0;
   }
+
+  p {
+    color: $color-gray;
+    font-size: .9rem !important;
+  }
 }
 
 
 .vip-services h3, h4 {
   color: #3A3A3A;
-  font-weight: bold;
 }
 
 .vip-item {
@@ -493,18 +506,19 @@ footer ul {
  */
 
 
-.stay-list ul li {
-  font-size: 0.9rem;
-  line-height: 2.2rem;
-}
-
-.stay-list ul li span {
-  margin-right: 1.5rem;
-}
-
 .stay-list {
   padding: 1rem;
+
+  ul li {
+    font-size: 0.9rem;
+    line-height: 2.2rem;
+
+    i {
+      margin-right: .5rem;
+    }
+  }
 }
+
 
 @media (max-width: 992px) {
   .stay-list {
@@ -1247,8 +1261,15 @@ ul.nav {
 
 /** Terms Privacy Refund **/
 
-.main-text h4 {
-  color: $color-blue !important;
+.main-content {
+  h4 {
+    color: $color-blue !important;
+  }
+
+  a {
+    color: $color-lightblue !important;
+    font-size: 1rem;
+  }
 }
 
 /** ABOUT **/
@@ -1282,3 +1303,30 @@ ul.nav {
   }
 }
 
+
+/**
+**  Privacy policy
+ */
+ul.contact-options {
+  list-style: none;
+
+  li {
+    font-size: 1rem !important;
+  }
+
+  li:before {
+    content: '-';
+    padding-right: 5px;
+  }
+
+  span {
+    color: $color-lightblue;
+    cursor: pointer;
+  }
+}
+
+/** Coming Soon**/
+.styles_typicalWrapper__1_Uvh {
+  font-size: 4rem;
+  color: $color-blue;
+}

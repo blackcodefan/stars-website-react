@@ -5,13 +5,22 @@ import {Link} from "react-router-dom";
 
 
 class PrivacyPolicyPage extends React.Component {
+
+    handleSendEmail = () => {
+        window.open(`mailto:hello@starsofboston.com`);
+    }
+
+    handleCall = () => {
+        window.open('tel:617-855-9576');
+    }
+
     render() {
         return (
             <header>
                 <section className="container-fluid main-background-2">
                     <HeaderNavbar/>
                 </section>
-                <div className="container mt-lg-5 mb-lg-5 main-text">
+                <div className="container mt-lg-5 mb-lg-5 main-content">
                     <div className="pl-lg-5">
                         <h2>Privacy Policy</h2>
                         <p>This privacy policy is meant to help you understand what information we collect, use, and how
@@ -114,13 +123,16 @@ class PrivacyPolicyPage extends React.Component {
                         <p>Once this privacy policy is created, we will add a link to it on our home page or as a
                             minimum, on
                             the first significant page after entering our website.</p>
-                        <p>Our Privacy Policy link includes the word 'Privacy' and can easily be found on the page specified
+                        <p>Our Privacy Policy link includes the word 'Privacy' and can easily be found on the page
+                            specified
                             above.</p>
                         <p>You will be notified of any Privacy Policy changes on our Privacy Policy Page</p>
                         <p>Can change your personal information:</p>
-                        <p>By emailing us<br/>
-                            By calling us<br/>
-                            Sending us a comment through our contact us page.</p>
+                        <ul className="contact-options">
+                            <li>By <span onClick={this.handleSendEmail}>emailing</span> us</li>
+                            <li>By <span onClick={this.handleCall}>calling</span> us</li>
+                            <li>Sending us a comment through our <Link to="/Contact"><span>contact us</span></Link> page.</li>
+                        </ul>
                         <h4>Children's Privacy</h4>
                         <p>STARS of Boston services are intended for a general audience and are not directed at
                             individuals

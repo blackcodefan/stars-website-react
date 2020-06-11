@@ -30,9 +30,11 @@ class ContactForm extends React.Component {
     //     })
     // }
     //
-    // handleSubmit = (e) => {
-    //
-    // }
+    handleSubmit = (fields) => {
+        const name = fields.firstName + '' + fields.lastName
+        window.open(`mailto:info@starsofboston.com?cc=${fields.email}?subject=${name}&body=${fields.message}`);
+
+    }
 
     render() {
         return (
@@ -54,9 +56,7 @@ class ContactForm extends React.Component {
                     message: Yup.string()
                         .required('message is required'),
                 })}
-                onSubmit={fields => {
-                    alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields, null, 4))
-                }}
+                onSubmit={fields => this.handleSubmit(fields)}
                 render={({errors, status, touched}) => (
                     <Form className="contact-form">
                         <div className="row">

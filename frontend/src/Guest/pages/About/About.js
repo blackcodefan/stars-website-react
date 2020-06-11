@@ -28,7 +28,7 @@ class About extends React.Component {
                 <section className="container-fluid main-background-2">
                     <HeaderNavbar/>
                 </section>
-                <div className="container mt-lg-5 mb-lg-5 main-text">
+                <div className="container mt-lg-5 mb-lg-5 main-content">
                     <div id="boston" className="row mb-5">
                         <div className="col-sm-6">
                             <h2>Our Mission</h2>
@@ -72,7 +72,7 @@ class About extends React.Component {
                         }
                     </div>
                 </section>
-                <div className="container mt-lg-5 mb-lg-5 main-text">
+                <div className="container mt-lg-5 mb-lg-5 main-content">
                     <div className="row">
                         <div className="col-sm-6">
                             <h2>Contact us</h2>

@@ -11,7 +11,7 @@ class Terms extends React.Component {
                 <section className="container-fluid main-background-2">
                     <HeaderNavbar/>
                 </section>
-                <div className="container mt-lg-5 mb-lg-5 main-text">
+                <div className="container mt-lg-5 mb-lg-5 main-content">
                     <h2>Terms & Conditions</h2>
                     <div className="pl-lg-5">
                         <h4>Overview</h4>
