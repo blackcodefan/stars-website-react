@@ -20,7 +20,7 @@ class SearchBox extends React.Component {
         return (
             <div className="search-box container" style={{marginTop: marginTop}}>
                 {
-                    currentPath === '/Apartments' ?
+                    (currentPath === '/Apartments' || currentPath ==='/') ?
                         <div>
                             <h1>
                                 Quick search your perfect accomodation
