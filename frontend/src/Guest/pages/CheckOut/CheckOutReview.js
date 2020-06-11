@@ -18,7 +18,7 @@ class CheckOutReview extends React.Component {
         return (
             <>
                 <header>
-                    <section className="container-fluid main-background">
+                    <section className="container-fluid main-background-2">
                         <HeaderNavbar/>
                     </section>
                 </header>
@@ -28,7 +28,7 @@ class CheckOutReview extends React.Component {
                         <div className="col-xl-7 checkout-booking-info">
                             <div className="row align-items-center">
                                 <div className="col-sm-9">
-                                    <h4>Review Rules & Policies</h4>
+                                    <h3>Review Rules & Policies</h3>
                                 </div>
                                 <div className="col-sm text-right">
                                     <h6>Step 2 of 3</h6>
@@ -76,12 +76,10 @@ class CheckOutReview extends React.Component {
                             <p><Link to="/contact">contact us</Link> if you want more information about long-term
                                 (+30
                                 days) reservations.</p>
-
                         </div>
 
 
                         <div className="col-md checkout-property-info">
-
                             <div className="row text-right">
                                 <div className="checkout-box col-xl">
 

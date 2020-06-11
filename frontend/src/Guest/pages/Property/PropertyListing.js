@@ -2,7 +2,7 @@ import React from "react";
 import queryString from 'query-string'
 
 import HeaderNavbar from "../../components/layout/HeaderNavbar";
-import SearchBox from "../../components/layout/SearchBox";
+import SearchBox from "../../components/sections/SearchBox";
 import PropertyCard from "../../components/sections/PropertyCard";
 import {Spinner} from "react-bootstrap";
 import {connect} from "react-redux";
@@ -82,9 +82,11 @@ class PropertyListing extends React.Component {
         return (
             <>
                 <header>
-                    <section className="container-fluid main-background">
+                    <section className="container-fluid main-background-3">
                         <HeaderNavbar/>
-                        <SearchBox/>
+                        <SearchBox
+                            currentPath={this.props.location.pathname}
+                            marginTop="200px"/>
                     </section>
                 </header>
                 <section className="container-fluid">

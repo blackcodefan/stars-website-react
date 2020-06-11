@@ -4,11 +4,11 @@ import Footer from "../../components/layout/Footer";
 import {Link} from "react-router-dom";
 
 
-class ComingSoon extends React.Component {
+class Terms extends React.Component {
     render() {
         return (
             <header>
-                <section className="container-fluid main-background">
+                <section className="container-fluid main-background-2">
                     <HeaderNavbar/>
                 </section>
                 <div className="container mt-lg-5 mb-lg-5 main-text">
@@ -352,4 +352,4 @@ class ComingSoon extends React.Component {
     }
 }
 
-export default ComingSoon
+export default Terms

@@ -5,13 +5,18 @@ import imgBoston from "../../../assets/images/locations-boston.jpg";
 import Footer from "../../components/layout/Footer";
 import ContactForm from "../../components/sections/ContactForm";
 import SubscribeView from "../../components/sections/SubscribeView";
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faInstagram, faTwitter, faFacebookSquare} from '@fortawesome/free-brands-svg-icons'
+
+library.add(faInstagram, faTwitter, faFacebookSquare);
 
 
 class About extends React.Component {
     render() {
         return (
             <header>
-                <section className="container-fluid main-background">
+                <section className="container-fluid main-background-2">
                     <HeaderNavbar/>
                 </section>
                 <div className="container mt-lg-5 mb-lg-5 main-text">
@@ -28,9 +33,11 @@ class About extends React.Component {
                                 USA
                             </p>
                             <div className="social-icons-contact">
-                                <i className="fa fa-instagram"/>
-                                <i className="fa fa-twitter"/>
-                                <i className="fa fa-facebook"/>
+                                <div className="social-icons-contact">
+                                    <FontAwesomeIcon icon={faInstagram}/>
+                                    <FontAwesomeIcon icon={faTwitter}/>
+                                    <FontAwesomeIcon icon={faFacebookSquare}/>
+                                </div>
                             </div>
                         </div>
                         <div className="col-sm-6">

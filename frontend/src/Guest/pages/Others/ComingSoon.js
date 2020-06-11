@@ -7,10 +7,10 @@ class ComingSoon extends React.Component {
     render() {
         return (
             <header>
-                <section className="container-fluid main-background">
+                <section className="container-fluid main-background-2">
                     <HeaderNavbar/>
                 </section>
-                <div className="container">
+                <div className="container mb-lg-5">
                    <h1> Coming Soon...</h1>
                 </div>
                 <Footer/>

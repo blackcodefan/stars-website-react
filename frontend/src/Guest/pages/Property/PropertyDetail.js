@@ -115,14 +115,14 @@ class PropertyDetail extends React.Component {
     handleBookClick = () => {
         console.log("========booking data=========", this.state)
         if (this.state.booking.checkInDate === '' || this.state.booking.checkOutDate === '') {
-            alert('please insert date')
+            alert('please select date')
             return false
         }
         if (this.state.booking.adultsCount === '' && this.state.booking.childrenCount === '') {
             alert('please insert number of people')
             return false
         }
-        history.push("/checkout")
+        history.push(`/checkout/${this.state.currentProperty.id}`)
     }
 
     render() {
@@ -140,7 +140,8 @@ class PropertyDetail extends React.Component {
             <>
                 <header>
                     <section className="container-fluid main-background-property">
-                        <HeaderNavbar/>
+                        <HeaderNavbar currentPath={this.props.location.pathname}
+                                      currentPropertyId={this.state.currentProperty.id}/>
                         <div className="container property-details-title">
                             <div className="row">
                                 <div className="col-sm">
@@ -283,7 +284,7 @@ class PropertyDetail extends React.Component {
                                             <p><strong>RESTAURANTS</strong><br/></p>
                                             {
                                                 currentProperty.neighborhoods.restaurants.map((item, index) => (
-                                                        <><p>{item}</p></>
+                                                        <><p key={index}>{item}</p></>
                                                     )
                                                 )
                                             }
@@ -292,7 +293,7 @@ class PropertyDetail extends React.Component {
                                             <p><strong>STORES</strong><br/></p>
                                             {
                                                 currentProperty.neighborhoods.stores.map((item, index) => (
-                                                        <><a href={item.link}>{item.name}</a></>
+                                                        <><a key={index} href={item.link}>{item.name}</a></>
                                                     )
                                                 )
                                             }
@@ -302,7 +303,7 @@ class PropertyDetail extends React.Component {
                                         <div id="transit" className="tab-pane fade">
                                             {
                                                 currentProperty.neighborhoods.transits.map((item, index) => (
-                                                        <><p>{item}</p></>
+                                                        <><p key={index}>{item}</p></>
                                                     )
                                                 )
                                             }
@@ -318,7 +319,7 @@ class PropertyDetail extends React.Component {
                                         <div className="container align-items-center check-form">
                                             <div className="row container align-items-center check-form">
                                                 <div className="col-md">
-                                                        <h3>$ {currentProperty.price}</h3><span>   per night</span>
+                                                    <h3>$ {currentProperty.price}</h3><span>   per night</span>
                                                 </div>
                                                 <div className="col-md takealook-button">
                                                     <button type="button" className=" btn btn-outline-secondary">
@@ -327,10 +328,10 @@ class PropertyDetail extends React.Component {
                                                 </div>
                                             </div>
                                             <BookingForm
-                                                checkInDate={this.state.booking.checkInDate}
-                                                checkOutDate={this.state.booking.checkOutDate}
-                                                adultsCount={this.state.booking.adultsCount}
-                                                childrenCount={this.state.booking.childrenCount}
+                                                checkInDate={booking.checkInDate}
+                                                checkOutDate={booking.checkOutDate}
+                                                adultsCount={booking.adultsCount}
+                                                childrenCount={booking.childrenCount}
                                                 handleCheckInChange={this.handleCheckInChange}
                                                 handleCheckOutChange={this.handleCheckOutChange}
                                                 handleAdultsCountChange={this.handleAdultsCountChange}
@@ -372,23 +373,23 @@ class PropertyDetail extends React.Component {
                         <h2>Similar Accommodations </h2>
                         <div className="row">
                             {
-                            currentProperty.similarAccommodations.map((property, index) => (
-                                    <PropertyCard
-                                        key={index}
-                                        id={property.id}
-                                        address={property.address}
-                                        title={property.title}
-                                        price={property.price}
-                                        countBed={property.countBed}
-                                        countSleep={property.countSleep}
-                                        countBath={property.countBath}
-                                        rentalParking={property.rentalParking}
-                                        furnished={property.furnished}
-                                        petsConsidered={property.petsConsidered}
-                                        bgImgLink={property.bgImgLink}/>
+                                currentProperty.similarAccommodations.map((property, index) => (
+                                        <PropertyCard
+                                            key={index}
+                                            id={property.id}
+                                            address={property.address}
+                                            title={property.title}
+                                            price={property.price}
+                                            countBed={property.countBed}
+                                            m countSleep={property.countSleep}
+                                            countBath={property.countBath}
+                                            rentalParking={property.rentalParking}
+                                            furnished={property.furnished}
+                                            petsConsidered={property.petsConsidered}
+                                            bgImgLink={property.bgImgLink}/>
+                                    )
                                 )
-                            )
-                        }
+                            }
                         </div>
                     </div>
                 </section>

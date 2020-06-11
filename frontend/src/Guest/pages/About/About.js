@@ -25,7 +25,7 @@ class About extends React.Component {
     render() {
         return (
             <header>
-                <section className="container-fluid main-background">
+                <section className="container-fluid main-background-2">
                     <HeaderNavbar/>
                 </section>
                 <div className="container mt-lg-5 mb-lg-5 main-text">
@@ -64,7 +64,7 @@ class About extends React.Component {
                         {
                             this.state.avatars && this.state.avatars.map((avatar, index) => {
                                 return (
-                                    <div className="col-sm-3">
+                                    <div key={index} className="col-sm-3">
                                         <img className="team-avatar" src={require(`../../../assets/images/avatars/${avatar}`)} alt={avatar}/>
                                     </div>
                                 )
@@ -90,7 +90,6 @@ class About extends React.Component {
                                 <FontAwesomeIcon icon={faTwitter} />
                                 <FontAwesomeIcon icon={faFacebookSquare} />
                             </div>
-
                         </div>
                         <div className="col-sm-6">
                             <ContactForm/>

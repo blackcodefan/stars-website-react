@@ -41,6 +41,13 @@
   .navbar-collapse {
     height: auto !important;
     flex-grow: 0;
+    .white-nav-link {
+      color: white!important;
+    }
+    .white-nav-link:after {
+      background-color: white!important;
+    }
+
 
     .nav-link {
       margin: 0 1rem !important;
@@ -311,7 +318,6 @@ footer ul {
   padding: 2rem 2rem 1rem;
   border-radius: 8px;
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.16);
-  margin-top: 450px;
 
   h1 {
     margin: 0 0 0.5rem 0;
@@ -806,6 +812,7 @@ footer ul {
   display: flex;
   align-items: flex-start;
   margin-top: 50px;
+
   h4 {
     color: $color-blue;
   }
@@ -836,27 +843,29 @@ footer ul {
 }
 
 .property-details-title {
-  margin-top: 250px;
+  margin-top: 150px;
   padding: 0 auto;
+
+  h1 {
+    color: white;
+    font-weight: bold;
+    margin: 6rem 0 0.2rem;
+  }
+
+  p {
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  button {
+    min-width: 0;
+    line-height: 100%;
+  }
 }
 
-.property-details-title h1 {
-  color: white;
-  font-weight: bold;
-  margin: 8rem 0 0.2rem;
-}
-
-.property-details-title p {
-  color: white;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-size: 0.8rem;
-  margin: 0;
-}
-
-.property-details-title button {
-  min-width: 0;
-}
 
 .btn-outline-secondary {
   border: 1px solid #E8C36A !important;
@@ -904,7 +913,7 @@ ul.nav {
 }
 
 .propertyfilterparent {
-  margin: 100px auto 0;
+  margin: 0 auto;
   padding: 0;
   border-bottom: 2px solid $color-yellow !important;
 }
@@ -1037,6 +1046,10 @@ ul.nav {
 
 .checkout-booking-info .button {
   margin: 1rem 0 1rem 0;
+}
+
+.checkout-main {
+
 }
 
 .small-checkout-link {

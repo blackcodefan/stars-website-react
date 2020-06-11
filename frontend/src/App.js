@@ -45,7 +45,7 @@ class App extends React.Component {
                             <Route exact path="/privacy-policy" component={Privacy}/>
                             <Route exact path="/cancellation-policy" component={CancellationPolicy}/>
                             <Route exact path="/contact" component={ContactUs}/>
-                            <Route exact path="/contact" component={ComingSoon}/>
+                            <Route exact path="" component={ComingSoon}/>
                         </Switch>
                     </Router>
                 </BrowserRouter>

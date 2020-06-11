@@ -136,26 +136,27 @@ i {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3), transparent), url(../../images/couch-background.jpg) no-repeat center;
   background-size: cover;
   padding: 3rem 3rem 1rem 3rem;
-  height: 650px;
+  height: 500px;
   position: relative;
 
 }
 
 .main-background-property {
-  background-size: cover;
-  height: 600px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../../images/stayinboston.jpg) no-repeat center;
+  background-size: cover;
+  height: 400px;
 }
 
 .main-background-2 {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4)), url(../../images/boston-2.jpg) no-repeat center;
   background-size: cover;
-  height: 650px;
+  height: 220px;
 }
 
 .main-background-3 {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)), url(../../images/boston-3.jpg) no-repeat center;
   background-size: cover;
+  height: 460px;
 }
 
 @media (max-width: 992px) {

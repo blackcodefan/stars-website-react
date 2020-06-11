@@ -129,16 +129,16 @@ class CheckOutStart extends React.Component {
         return (
             <>
                 <header>
-                    <section className="container-fluid main-background">
+                    <section className="container-fluid main-background-2">
                         <HeaderNavbar/>
                     </section>
                 </header>
-                <section className="checkout-main container-fluid">
+                <section className="container-fluid checkout-main">
                     <div className="row align-items start container align-items-start">
                         <div className="col-xl-7 checkout-booking-info">
                             <div className="row align-items-center">
                                 <div className="col-sm-9">
-                                    <h4>Begin your booking</h4>
+                                    <h3>Begin your booking</h3>
                                 </div>
                                 <div className="col-sm text-right">
                                     <h6>Step 1 of 3</h6>

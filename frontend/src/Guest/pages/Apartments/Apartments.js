@@ -1,6 +1,6 @@
 import React from "react";
 
-import SearchBox from "../../components/layout/SearchBox";
+import SearchBox from "../../components/sections/SearchBox";
 import SolutionView from "../../components/sections/SolutionView";
 import HeaderNavbar from "../../components/layout/HeaderNavbar";
 import GuestReviewsView from "../../components/sections/GuestReviewsView";
@@ -24,7 +24,6 @@ import icon9 from "../../../assets/images/icons/icons_9.svg";
 import icon10 from "../../../assets/images/icons/icons_10.svg";
 import doctor from "../../../assets/images/doctor.jpg";
 import {Link} from "react-router-dom";
-
 
 
 class Apartments extends React.Component {
@@ -58,7 +57,9 @@ class Apartments extends React.Component {
                 <header>
                     <section className="container-fluid main-background">
                         <HeaderNavbar/>
-                        <SearchBox/>
+                        <SearchBox
+                            currentPath={this.props.location.pathname}
+                            marginTop="300px"/>
                     </section>
                 </header>
                 <SolutionView/>
@@ -267,8 +268,9 @@ class Apartments extends React.Component {
 
                                     return (
                                         <div className="col-md-6 col-lg-3">
-                                            <div className="location" style={ bgStyle }>
-                                                <div className="location-title"><Link to="/locations"><h4>{location.title}</h4></Link></div>
+                                            <div className="location" style={bgStyle}>
+                                                <div className="location-title"><Link to="/locations">
+                                                    <h4>{location.title}</h4></Link></div>
                                             </div>
                                         </div>
                                     )
