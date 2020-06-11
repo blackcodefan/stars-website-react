@@ -59,7 +59,7 @@ class Apartments extends React.Component {
                         <HeaderNavbar/>
                         <SearchBox
                             currentPath={this.props.location.pathname}
-                            marginTop="300px"/>
+                            marginTop="325px"/>
                     </section>
                 </header>
                 <SolutionView/>
